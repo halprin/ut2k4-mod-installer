@@ -1,4 +1,13 @@
 {
-    IBClasses = ({CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }); 
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {findMod = id; findUT = id; installMod = id; }; 
+            CLASS = MainWindow; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"mod_path" = NSTextField; "ut_path" = NSTextField; "zip_umod" = NSMatrix; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
     IBVersion = 1; 
 }
