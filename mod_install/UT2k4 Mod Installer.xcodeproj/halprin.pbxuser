@@ -12,6 +12,9 @@
 		activeBuildConfigurationName = Debug;
 		activeExecutable = EE06416B0A6B62AB0023C0F1 /* UT2k4 Mod Installer */;
 		activeTarget = 8D1107260486CEB800E47090 /* UT2k4 Mod Installer */;
+		addToTargets = (
+			8D1107260486CEB800E47090 /* UT2k4 Mod Installer */,
+		);
 		codeSenseManager = EE06417A0A6B62AD0023C0F1 /* Code sense */;
 		executables = (
 			EE06416B0A6B62AB0023C0F1 /* UT2k4 Mod Installer */,
@@ -141,13 +144,13 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 181198023;
-			PBXWorkspaceStateSaveDate = 181198023;
+			PBXPerProjectTemplateStateSaveDate = 181267947;
+			PBXWorkspaceStateSaveDate = 181267947;
 		};
 		perUserProjectItems = {
 			EE121FF40ACCDC9F0042ED76 = EE121FF40ACCDC9F0042ED76 /* PBXTextBookmark */;
-			EE6CEDCD0ACCDCE400BD435D /* PBXTextBookmark */ = EE6CEDCD0ACCDCE400BD435D /* PBXTextBookmark */;
-			EECA4F820ACCDBB100AA0307 = EECA4F820ACCDBB100AA0307 /* PBXTextBookmark */;
+			EE6CEDDA0ACCE03700BD435D = EE6CEDDA0ACCE03700BD435D /* PBXTextBookmark */;
+			EEC905F50ACDEE6A00AD2F02 /* PBXTextBookmark */ = EEC905F50ACDEE6A00AD2F02 /* PBXTextBookmark */;
 		};
 		sourceControlManager = EE0641790A6B62AD0023C0F1 /* Source Control */;
 		userBuildSettings = {
@@ -231,9 +234,9 @@
 	EE0F690A0ACCCB4100DB4634 /* MainWindow.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {713, 546}}";
-			sepNavSelRange = "{596, 0}";
-			sepNavVisRect = "{{0, 0}, {713, 431}}";
-			sepNavWindowFrame = "{{261, 179}, {758, 560}}";
+			sepNavSelRange = "{744, 0}";
+			sepNavVisRect = "{{0, 115}, {713, 431}}";
+			sepNavWindowFrame = "{{579, 96}, {758, 560}}";
 		};
 	};
 	EE121FF40ACCDC9F0042ED76 /* PBXTextBookmark */ = {
@@ -246,7 +249,7 @@
 		vrLen = 0;
 		vrLoc = 0;
 	};
-	EE6CEDCD0ACCDCE400BD435D /* PBXTextBookmark */ = {
+	EE6CEDDA0ACCE03700BD435D /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 32CA4F630368D1EE00C91783 /* UT2k4 Mod Installer_Prefix.pch */;
 		name = "UT2k4 Mod Installer_Prefix.pch: 1";
@@ -256,7 +259,7 @@
 		vrLen = 0;
 		vrLoc = 0;
 	};
-	EECA4F820ACCDBB100AA0307 /* PBXTextBookmark */ = {
+	EEC905F50ACDEE6A00AD2F02 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 32CA4F630368D1EE00C91783 /* UT2k4 Mod Installer_Prefix.pch */;
 		name = "UT2k4 Mod Installer_Prefix.pch: 1";
