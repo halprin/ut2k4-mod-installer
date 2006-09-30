@@ -46,6 +46,10 @@
 
 - (IBAction)findUT:(id)sender
 {
+	NSNotificationCenter *center=[NSNotificationCenter defaultCenter];
+	[center addObserver: self selector: @selector(textChange:) name: @"NSControlTextDidChangeNotification" object: mod_path];
+	[center addObserver: self selector: @selector(textChange:) name: @"NSControlTextDidChangeNotification" object: ut_path];
+	
 	NSString *path=@"-1";
 	NSLog(@"display open dialog for .app files");
 	//setup and display the open dialog box
@@ -64,6 +68,20 @@
 - (IBAction)installMod:(id)sender
 {
 	
+}
+
+-(void) textChange: (NSNotification*) notification
+{
+	if([[ut_path stringValue] length]!=0 && [[mod_path stringValue] length]!=0)
+	{
+		NSLog(@"Enable the Install button");
+		[install setEnabled: YES];
+	}
+	else
+	{
+		NSLog(@"Disable the Install button");
+		[install setEnabled: NO];
+	}
 }
 
 @end
