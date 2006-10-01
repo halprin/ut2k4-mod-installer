@@ -14,4 +14,5 @@
 - (IBAction)findUT:(id)sender;
 - (IBAction)installMod:(id)sender;
 -(void) textChange: (NSNotification*) notification;
+-(void) finishLoad: (NSNotification*) notification;
 @end
