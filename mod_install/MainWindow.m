@@ -2,6 +2,18 @@
 
 @implementation MainWindow
 
+-(MainWindow*) init
+{
+	if(self=[super init])
+	{
+		//get notification if one of the text boxes contents changes and set it to textChange:
+		NSNotificationCenter *center=[NSNotificationCenter defaultCenter];
+		[center addObserver: self selector: @selector(textChange:) name: @"NSControlTextDidChangeNotification" object: mod_path];
+		[center addObserver: self selector: @selector(textChange:) name: @"NSControlTextDidChangeNotification" object: ut_path];
+	}
+	return self;
+}
+
 - (IBAction)findMod:(id)sender
 {
 	NSButtonCell *zip=[zip_umod cellAtRow: 0 column: 0];
@@ -46,10 +58,6 @@
 
 - (IBAction)findUT:(id)sender
 {
-	NSNotificationCenter *center=[NSNotificationCenter defaultCenter];
-	[center addObserver: self selector: @selector(textChange:) name: @"NSControlTextDidChangeNotification" object: mod_path];
-	[center addObserver: self selector: @selector(textChange:) name: @"NSControlTextDidChangeNotification" object: ut_path];
-	
 	NSString *path=@"-1";
 	NSLog(@"display open dialog for .app files");
 	//setup and display the open dialog box

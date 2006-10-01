@@ -9,6 +9,7 @@
     IBOutlet NSTextField *ut_path;
     IBOutlet NSMatrix *zip_umod;
 }
+-(MainWindow*) init;
 - (IBAction)findMod:(id)sender;
 - (IBAction)findUT:(id)sender;
 - (IBAction)installMod:(id)sender;
