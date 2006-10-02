@@ -14,6 +14,8 @@
 		EE0F690B0ACCCB4100DB4634 /* MainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0F690A0ACCCB4100DB4634 /* MainWindow.m */; };
 		EE2363810ACF05E200957E16 /* at_sign.png in Resources */ = {isa = PBXBuildFile; fileRef = EE2363800ACF05E200957E16 /* at_sign.png */; };
 		EE23639F0ACF06BC00957E16 /* unzip in Resources */ = {isa = PBXBuildFile; fileRef = EE23639E0ACF06BC00957E16 /* unzip */; };
+		EE89920B0AD0962400AC5B87 /* ProgressWindow.nib in Resources */ = {isa = PBXBuildFile; fileRef = EE89920A0AD0962400AC5B87 /* ProgressWindow.nib */; };
+		EE8992A20AD0B27900AC5B87 /* Progress.m in Sources */ = {isa = PBXBuildFile; fileRef = EE8992A10AD0B27900AC5B87 /* Progress.m */; };
 		EEC905F40ACDEE5300AD2F02 /* mod_install.icns in Resources */ = {isa = PBXBuildFile; fileRef = EEC905F30ACDEE5300AD2F02 /* mod_install.icns */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +34,9 @@
 		EE0F690A0ACCCB4100DB4634 /* MainWindow.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MainWindow.m; sourceTree = "<group>"; };
 		EE2363800ACF05E200957E16 /* at_sign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = at_sign.png; sourceTree = "<group>"; };
 		EE23639E0ACF06BC00957E16 /* unzip */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = unzip; sourceTree = "<group>"; };
+		EE89920A0AD0962400AC5B87 /* ProgressWindow.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = ProgressWindow.nib; path = English.lproj/ProgressWindow.nib; sourceTree = "<group>"; };
+		EE8992A00AD0B27900AC5B87 /* Progress.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Progress.h; sourceTree = "<group>"; };
+		EE8992A10AD0B27900AC5B87 /* Progress.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Progress.m; sourceTree = "<group>"; };
 		EEC905F30ACDEE5300AD2F02 /* mod_install.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = mod_install.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,6 +55,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				EE8992A00AD0B27900AC5B87 /* Progress.h */,
+				EE8992A10AD0B27900AC5B87 /* Progress.m */,
 				EE0F69090ACCCB4100DB4634 /* MainWindow.h */,
 				EE0F690A0ACCCB4100DB4634 /* MainWindow.m */,
 			);
@@ -106,6 +113,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EE89920A0AD0962400AC5B87 /* ProgressWindow.nib */,
 				EE2363800ACF05E200957E16 /* at_sign.png */,
 				EE23639E0ACF06BC00957E16 /* unzip */,
 				EEC905F30ACDEE5300AD2F02 /* mod_install.icns */,
@@ -171,6 +179,7 @@
 				EEC905F40ACDEE5300AD2F02 /* mod_install.icns in Resources */,
 				EE2363810ACF05E200957E16 /* at_sign.png in Resources */,
 				EE23639F0ACF06BC00957E16 /* unzip in Resources */,
+				EE89920B0AD0962400AC5B87 /* ProgressWindow.nib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +192,7 @@
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				EE0F690B0ACCCB4100DB4634 /* MainWindow.m in Sources */,
+				EE8992A20AD0B27900AC5B87 /* Progress.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
