@@ -9,6 +9,7 @@
                 install = NSButton; 
                 "mod_path" = NSTextField; 
                 "ut_path" = NSTextField; 
+                window = NSWindow; 
                 "zip_umod" = NSMatrix; 
             }; 
             SUPERCLASS = NSObject; 
