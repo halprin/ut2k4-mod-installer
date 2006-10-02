@@ -85,17 +85,60 @@
 
 - (IBAction)installMod:(id)sender
 {
-	
+	//need to make sure that UT2k4 and the mod really exist as the user could
+	//of entered the path manually
+	NSFileManager *exists=[NSFileManager defaultManager];
+	if([exists fileExistsAtPath: [ut_path stringValue]]==NO)  //UT2k4 does not exist
+	{
+		NSLog(@"UT2k4 doesn't exist!");
+		NSBeginAlertSheet(@"UT2k4 does not exist!", @"OK", nil, nil, window, self, nil, nil, nil, @"UT2k4 does not exist at that location.  A way to make sure that it exists is by selecting it through the \"Browse...\" button.");
+	}
+	else  //UT2k4 does exist
+	{
+		if([exists fileExistsAtPath: [mod_path stringValue]]==NO)  //the mod does not exist
+		{
+			NSLog(@"Mod doesn't exist!");
+			NSBeginAlertSheet(@"Mod does not exist!", @"OK", nil, nil, window, self, nil, nil, nil, @"The mod file that you specified does not exist.  A way to make sure that it exists is by selecting it through the \"Browse...\" button.");
+		}
+		else  //the mod does exist
+		{
+			//I might need to remove this next line possibly if the person wants to install another mod right after another
+			if(controller==nil)  //if the controller hasn't been created yet
+			{
+				controller = [[Progress alloc] initWithWindowNibName: @"ProgressWindow"];
+			}
+			
+			//pass the UT2k4 and mod path to the new progress window
+			[controller setUT: [ut_path stringValue]];
+			[controller setMod: [mod_path stringValue]];
+			//tell the new progress window weather it is a zip or a umod we are doing
+			if([[zip_umod cellAtRow: 0 column: 0] state]==1)  //ZIP is selected in the Radio control
+			{
+				[controller setZU: @"zip"];
+			}
+			else if([[zip_umod cellAtRow: 0 column: 1] state]==1)  //UMOD is selected in the Radio control
+			{
+				[controller setZU: @"umod"];
+			}
+			else  //This should never execute, if so, BUG!
+			{
+				NSLog(@"Bugzor!");
+			} 
+			
+			//display the sheet!
+			[NSApp beginSheet: [controller window] modalForWindow: window modalDelegate: self didEndSelector: nil contextInfo: nil];
+		}
+	}
 }
 
 -(void) textChange: (NSNotification*) notification
 {
-	if([[ut_path stringValue] length]!=0 && [[mod_path stringValue] length]!=0)
+	if([[ut_path stringValue] length]!=0 && [[mod_path stringValue] length]!=0)  //both text boxes have text
 	{
 		NSLog(@"Enable the Install button");
 		[install setEnabled: YES];
 	}
-	else
+	else //both text boxes have no text
 	{
 		NSLog(@"Disable the Install button");
 		[install setEnabled: NO];

@@ -1,13 +1,16 @@
 /* MainWindow */
 
 #import <Cocoa/Cocoa.h>
+#import "Progress.h"
 
 @interface MainWindow : NSObject
 {
     IBOutlet NSButton *install;
     IBOutlet NSTextField *mod_path;
     IBOutlet NSTextField *ut_path;
+    IBOutlet NSWindow *window;
     IBOutlet NSMatrix *zip_umod;
+	Progress *controller;
 }
 -(MainWindow*) init;
 - (IBAction)findMod:(id)sender;
