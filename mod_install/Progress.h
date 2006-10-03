@@ -14,6 +14,7 @@
 -(void) setUT: (NSString*) path;
 -(void) setMod: (NSString*) path;
 -(void) setZU: (NSString*) zu;
+-(void) windowLoaded: (NSNotification*) notification;
 -(void) zip_install;
 -(void) umod_install;
 @end

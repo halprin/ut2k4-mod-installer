@@ -16,6 +16,7 @@
 		EE23639F0ACF06BC00957E16 /* unzip in Resources */ = {isa = PBXBuildFile; fileRef = EE23639E0ACF06BC00957E16 /* unzip */; };
 		EE89920B0AD0962400AC5B87 /* ProgressWindow.nib in Resources */ = {isa = PBXBuildFile; fileRef = EE89920A0AD0962400AC5B87 /* ProgressWindow.nib */; };
 		EE8992A20AD0B27900AC5B87 /* Progress.m in Sources */ = {isa = PBXBuildFile; fileRef = EE8992A10AD0B27900AC5B87 /* Progress.m */; };
+		EEA6E24D0AD20AC100D5B54B /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = EEA6E24C0AD20AC100D5B54B /* Credits.html */; };
 		EEC905F40ACDEE5300AD2F02 /* mod_install.icns in Resources */ = {isa = PBXBuildFile; fileRef = EEC905F30ACDEE5300AD2F02 /* mod_install.icns */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		EE89920A0AD0962400AC5B87 /* ProgressWindow.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = ProgressWindow.nib; path = English.lproj/ProgressWindow.nib; sourceTree = "<group>"; };
 		EE8992A00AD0B27900AC5B87 /* Progress.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Progress.h; sourceTree = "<group>"; };
 		EE8992A10AD0B27900AC5B87 /* Progress.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Progress.m; sourceTree = "<group>"; };
+		EEA6E24C0AD20AC100D5B54B /* Credits.html */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html; path = Credits.html; sourceTree = "<group>"; };
 		EEC905F30ACDEE5300AD2F02 /* mod_install.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = mod_install.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +115,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EEA6E24C0AD20AC100D5B54B /* Credits.html */,
 				EE89920A0AD0962400AC5B87 /* ProgressWindow.nib */,
 				EE2363800ACF05E200957E16 /* at_sign.png */,
 				EE23639E0ACF06BC00957E16 /* unzip */,
@@ -180,6 +183,7 @@
 				EE2363810ACF05E200957E16 /* at_sign.png in Resources */,
 				EE23639F0ACF06BC00957E16 /* unzip in Resources */,
 				EE89920B0AD0962400AC5B87 /* ProgressWindow.nib in Resources */,
+				EEA6E24D0AD20AC100D5B54B /* Credits.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

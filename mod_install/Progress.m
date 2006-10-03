@@ -3,6 +3,9 @@
 @implementation Progress
 -(void) windowDidLoad
 {
+	NSNotificationCenter *center=[NSNotificationCenter defaultCenter];
+	[center addObserver: self selector: @selector(windowLoaded:) name: @"_NSWindowDidBecomeVisible" object: [self window]];
+	
 	//start animate the barber pole
 	[progress_bar startAnimation: self];
 	
@@ -10,12 +13,10 @@
 	if([zip_umod isEqualToString: @"zip"])  //it is a zip mod
 	{
 		[status_text setStringValue: @"Unzipping and installing:"];
-		[self zip_install];  //need to move to a notification so the sheet actually displays
 	}
 	else if([zip_umod isEqualToString: @"umod"])  //it is a umod
 	{
 		[status_text setStringValue: @"Reading umod:"];
-		[self umod_install];  //need to move to a notification so the sheet actually displays
 	}
 }
 
@@ -32,6 +33,18 @@
 -(void) setZU: (NSString*) zu
 {
 	zip_umod=zu;
+}
+
+-(void) windowLoaded: (NSNotification*) notification
+{
+	if([zip_umod isEqualToString: @"zip"])  //it is a zip mod
+	{
+		[self zip_install];
+	}
+	else if([zip_umod isEqualToString: @"umod"])  //it is a umod
+	{
+		[self umod_install];
+	}
 }
 
 -(void) zip_install
@@ -66,6 +79,5 @@
 -(void) umod_install
 {
 	NSLog(@"UMOD install not implemented yet");
-	[[self window] close];
 }
 @end
