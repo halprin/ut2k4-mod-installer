@@ -45,6 +45,10 @@
 	{
 		[self umod_install];
 	}
+	
+	//dismis the sheet
+	[[self window] orderOut: self];
+	[NSApp endSheet: [self window] returnCode: 1];
 }
 
 -(void) zip_install
@@ -70,10 +74,6 @@
 	NSData* data=[file readDataToEndOfFile];
 	NSString *contents=[NSString stringWithUTF8String: [data bytes]];
 	NSLog(contents);
-	
-	//[NSApp endSheet: [self window]];
-	//[[self window] close];
-	//[[self window] orderOut: self];
 }
 
 -(void) umod_install
