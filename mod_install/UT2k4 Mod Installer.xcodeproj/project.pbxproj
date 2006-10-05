@@ -14,6 +14,7 @@
 		EE0F690B0ACCCB4100DB4634 /* MainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0F690A0ACCCB4100DB4634 /* MainWindow.m */; };
 		EE2363810ACF05E200957E16 /* at_sign.png in Resources */ = {isa = PBXBuildFile; fileRef = EE2363800ACF05E200957E16 /* at_sign.png */; };
 		EE23639F0ACF06BC00957E16 /* unzip in Resources */ = {isa = PBXBuildFile; fileRef = EE23639E0ACF06BC00957E16 /* unzip */; };
+		EE892F350AD4E0060058F163 /* InstallEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = EE892F340AD4E0060058F163 /* InstallEngine.m */; };
 		EE89920B0AD0962400AC5B87 /* ProgressWindow.nib in Resources */ = {isa = PBXBuildFile; fileRef = EE89920A0AD0962400AC5B87 /* ProgressWindow.nib */; };
 		EE8992A20AD0B27900AC5B87 /* Progress.m in Sources */ = {isa = PBXBuildFile; fileRef = EE8992A10AD0B27900AC5B87 /* Progress.m */; };
 		EEA6E24D0AD20AC100D5B54B /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = EEA6E24C0AD20AC100D5B54B /* Credits.html */; };
@@ -35,6 +36,8 @@
 		EE0F690A0ACCCB4100DB4634 /* MainWindow.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MainWindow.m; sourceTree = "<group>"; };
 		EE2363800ACF05E200957E16 /* at_sign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = at_sign.png; sourceTree = "<group>"; };
 		EE23639E0ACF06BC00957E16 /* unzip */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = unzip; sourceTree = "<group>"; };
+		EE892F330AD4E0060058F163 /* InstallEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstallEngine.h; sourceTree = "<group>"; };
+		EE892F340AD4E0060058F163 /* InstallEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstallEngine.m; sourceTree = "<group>"; };
 		EE89920A0AD0962400AC5B87 /* ProgressWindow.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = ProgressWindow.nib; path = English.lproj/ProgressWindow.nib; sourceTree = "<group>"; };
 		EE8992A00AD0B27900AC5B87 /* Progress.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Progress.h; sourceTree = "<group>"; };
 		EE8992A10AD0B27900AC5B87 /* Progress.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Progress.m; sourceTree = "<group>"; };
@@ -57,6 +60,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				EE892F330AD4E0060058F163 /* InstallEngine.h */,
+				EE892F340AD4E0060058F163 /* InstallEngine.m */,
 				EE8992A00AD0B27900AC5B87 /* Progress.h */,
 				EE8992A10AD0B27900AC5B87 /* Progress.m */,
 				EE0F69090ACCCB4100DB4634 /* MainWindow.h */,
@@ -197,6 +202,7 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				EE0F690B0ACCCB4100DB4634 /* MainWindow.m in Sources */,
 				EE8992A20AD0B27900AC5B87 /* Progress.m in Sources */,
+				EE892F350AD4E0060058F163 /* InstallEngine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

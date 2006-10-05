@@ -9,6 +9,7 @@
 	NSString *ut_path;
 	NSString *mod_path;
 	NSString *zip_umod;
+	BOOL inst_done;
 }
 -(void) windowDidLoad;
 -(void) setUT: (NSString*) path;
@@ -17,4 +18,6 @@
 -(void) windowLoaded: (NSNotification*) notification;
 -(void) zip_install;
 -(void) umod_install;
+-(void) installDone: (NSNotification*) notification;
+-(void) start: (NSTimer*) timer;
 @end
