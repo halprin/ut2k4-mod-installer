@@ -105,13 +105,19 @@
 	//find how many elements and set that to the max size of the progress bar
 	NSArray *elements=[contents componentsSeparatedByString: @"\n"];
 	NSMutableArray *elem_temp=[NSMutableArray arrayWithArray: elements];
-	//for(
-	[elem_temp removeLastObject];
-	//for(
-	[elem_temp removeObjectAtIndex: 0];
+	int lcv=0;
+	for(lcv=0; lcv<13; lcv++)
+	{
+		[elem_temp removeLastObject];
+	}
+	for(lcv=0; lcv<12; lcv++)
+	{
+		[elem_temp removeObjectAtIndex: 0];
+	}
 	elements=[NSArray arrayWithArray: elem_temp];
 	[progress_bar setIndeterminate: NO];
 	[progress_bar setMaxValue: ((double)[elements count])];
+	NSLog([elements objectAtIndex: 0]);
 	NSLog([elements objectAtIndex: [elements count]-1]);
 	
 	
