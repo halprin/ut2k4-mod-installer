@@ -16,8 +16,6 @@
 -(void) setMod: (NSString*) path;
 -(void) setZU: (NSString*) zu;
 -(void) windowLoaded: (NSNotification*) notification;
--(void) zip_install;
--(void) umod_install;
 -(void) installDone: (NSNotification*) notification;
 -(void) start: (NSTimer*) timer;
 @end

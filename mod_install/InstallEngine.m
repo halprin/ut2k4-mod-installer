@@ -16,8 +16,6 @@
 	NSString *mod_path=[info objectAtIndex: 0];
 	NSString *ut_path=[info objectAtIndex: 1];
 	NSProgressIndicator *progress_bar=[info objectAtIndex: 2];
-	printf("Hello!\n");
-	//NSLog(@"Start ZIP install");
 	
 	//get the path to the unzip program
 	NSString *zip_path=[[NSBundle mainBundle] bundlePath];
@@ -47,10 +45,8 @@
 	elements=[NSArray arrayWithArray: elem_temp];
 	[progress_bar setIndeterminate: NO];
 	[progress_bar setMaxValue: ((double)[elements count])];
-	printf("%f\n", ((double)[elements count]));
 	
-	//NSLog(@"Starting actual installation!");
-	printf("Starting actual installation!\n");
+	NSLog(@"Starting actual installation!");
 	//time for the actual unstuffing
 	task=[[NSTask alloc] init];
 	[task setLaunchPath: zip_path];
@@ -59,30 +55,46 @@
 	pipe=[NSPipe pipe];
 	[task setStandardOutput: pipe];
 	file=[pipe fileHandleForReading];
-	//ececute
+	//execute unzip -o *mod_path* -d *ut_path*
+	//that unzips the .zip at the mod_path and b/c of the -d it unzips it into ut_path and b/c of the -o overwrites everything
 	[task launch];
-	[progress_bar setDoubleValue: 0.0];
-	//NSRunLoop *theRL=[NSRunLoop currentRunLoop];
-	while([task isRunning]==YES/* && [theRL runMode: NSDefaultRunLoopMode beforeDate: [NSDate dateWithTimeIntervalSinceNow: 5.0]]*/)
+	while([task isRunning]==YES)
 	{
 		//still running and update the progress bar
-		//printf("running task begin...\n");
 		data=[file availableData];
-		//printf("%i\n", [data length]);
-		if([data length]!=0 && [data length]!=1)
+		if([data length]!=0 && [data length]!=1)  //the buffer isn't empty and there isn't just a wierd space thingy
 		{
 			contents=[NSString stringWithUTF8String: [data bytes]];
 			NSLog(contents);
 			[progress_bar incrementBy: ((double)[[contents componentsSeparatedByString: @"\n"] count])];
 		}
-		//printf("%f\n", ((double)[[[NSString stringWithUTF8String: [[file availableData] bytes]] componentsSeparatedByString: @"\n"] count]));
-		//printf("%f\n", [progress_bar doubleValue]);
-		//printf("running task end...\n");
 	}
-	//printf("%f\n", ((double)[[[NSString stringWithUTF8String: [[file availableData] bytes]] componentsSeparatedByString: @"\n"] count]));
-	NSLog(@"DONE!");
+	
+	[progress_bar setDoubleValue: [progress_bar maxValue]];
+	
+	//post a notification that the install is done
 	NSNotificationCenter *center=[NSNotificationCenter defaultCenter];
 	[center postNotificationName: @"InstallDone" object: self];
+	
 	[pool release];
 }
+
++(void) umod_install: (id) info
+{
+	NSAutoreleasePool *pool=[[NSAutoreleasePool alloc] init];
+	NSString *mod_path=[info objectAtIndex: 0];
+	NSString *ut_path=[info objectAtIndex: 1];
+	NSProgressIndicator *progress_bar=[info objectAtIndex: 2];
+	
+	NSLog(@"UMOD install not implemented yet");
+	
+	[progress_bar setDoubleValue: [progress_bar maxValue]];
+	
+	//post a notification that the install is done
+	NSNotificationCenter *center=[NSNotificationCenter defaultCenter];
+	[center postNotificationName: @"InstallDone" object: self];
+	
+	[pool release];
+}
+
 @end

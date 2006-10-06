@@ -103,10 +103,10 @@
 		else  //the mod does exist
 		{
 			//I might need to remove this next line possibly if the person wants to install another mod right after another
-			if(controller==nil)  //if the controller hasn't been created yet
-			{
+			//if(controller==nil)  //if the controller hasn't been created yet
+			//{
 				controller = [[Progress alloc] initWithWindowNibName: @"ProgressWindow"];
-			}
+			//}
 			
 			//pass the UT2k4 and mod path to the new progress window
 			[controller setUT: [ut_path stringValue]];
@@ -127,6 +127,8 @@
 			
 			//display the sheet!
 			[NSApp beginSheet: [controller window] modalForWindow: window modalDelegate: self didEndSelector: nil contextInfo: nil];
+			
+			[controller release];
 		}
 	}
 }

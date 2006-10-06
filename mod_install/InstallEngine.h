@@ -14,4 +14,5 @@
 
 }
 +(void) zip_install: (id) info;
++(void) umod_install: (id) info;
 @end
