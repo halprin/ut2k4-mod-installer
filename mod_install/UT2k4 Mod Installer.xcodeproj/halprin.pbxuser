@@ -161,51 +161,33 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 181782205;
-			PBXWorkspaceStateSaveDate = 181782205;
+			PBXPerProjectTemplateStateSaveDate = 181850740;
+			PBXWorkspaceStateSaveDate = 181850740;
 		};
 		perUserProjectItems = {
-			EE84C95C0AD5C4F100525842 = EE84C95C0AD5C4F100525842 /* PBXTextBookmark */;
-			EE84C9970AD5C66A00525842 = EE84C9970AD5C66A00525842 /* PBXTextBookmark */;
+			EE01433D0AD6D8B100CB7415 /* PBXTextBookmark */ = EE01433D0AD6D8B100CB7415 /* PBXTextBookmark */;
+			EE01433E0AD6D8B100CB7415 /* PBXTextBookmark */ = EE01433E0AD6D8B100CB7415 /* PBXTextBookmark */;
+			EE0143470AD6D8BA00CB7415 /* PBXTextBookmark */ = EE0143470AD6D8BA00CB7415 /* PBXTextBookmark */;
+			EE0143480AD6D8BA00CB7415 /* PBXTextBookmark */ = EE0143480AD6D8BA00CB7415 /* PBXTextBookmark */;
+			EE0143490AD6D8BA00CB7415 /* PBXTextBookmark */ = EE0143490AD6D8BA00CB7415 /* PBXTextBookmark */;
+			EE01434A0AD6D8BA00CB7415 /* PBXTextBookmark */ = EE01434A0AD6D8BA00CB7415 /* PBXTextBookmark */;
+			EE01434E0AD6D8BD00CB7415 /* PBXTextBookmark */ = EE01434E0AD6D8BD00CB7415 /* PBXTextBookmark */;
+			EE0143570AD6D9D800CB7415 /* PBXTextBookmark */ = EE0143570AD6D9D800CB7415 /* PBXTextBookmark */;
+			EE0143580AD6D9D800CB7415 /* PBXTextBookmark */ = EE0143580AD6D9D800CB7415 /* PBXTextBookmark */;
+			EE0143590AD6D9D800CB7415 /* PBXTextBookmark */ = EE0143590AD6D9D800CB7415 /* PBXTextBookmark */;
+			EE01435A0AD6D9D800CB7415 /* PBXTextBookmark */ = EE01435A0AD6D9D800CB7415 /* PBXTextBookmark */;
+			EE0143600AD6D9FF00CB7415 /* PBXTextBookmark */ = EE0143600AD6D9FF00CB7415 /* PBXTextBookmark */;
+			EE0143650AD6DAE000CB7415 /* PBXTextBookmark */ = EE0143650AD6DAE000CB7415 /* PBXTextBookmark */;
+			EE0143680AD6DB5500CB7415 /* PBXTextBookmark */ = EE0143680AD6DB5500CB7415 /* PBXTextBookmark */;
+			EE01436E0AD6DBC500CB7415 /* PBXTextBookmark */ = EE01436E0AD6DBC500CB7415 /* PBXTextBookmark */;
+			EE0143710AD6DBF600CB7415 /* PBXTextBookmark */ = EE0143710AD6DBF600CB7415 /* PBXTextBookmark */;
+			EE0143750AD6DC3D00CB7415 /* PBXTextBookmark */ = EE0143750AD6DC3D00CB7415 /* PBXTextBookmark */;
 			EEBF7DCB0ACE516400430F61 = EEBF7DCB0ACE516400430F61 /* PBXTextBookmark */;
 			EEBF7DCD0ACE516400430F61 = EEBF7DCD0ACE516400430F61 /* PBXTextBookmark */;
-			EEE487000AD5C6BE00714964 /* PBXTextBookmark */ = EEE487000AD5C6BE00714964 /* PBXTextBookmark */;
-			EEE487120AD5DB3F00714964 /* PBXTextBookmark */ = EEE487120AD5DB3F00714964 /* PBXTextBookmark */;
-			EEE487190AD5FBAF00714964 /* PBXBookmark */ = EEE487190AD5FBAF00714964 /* PBXBookmark */;
-			EEE4871A0AD5FBB800714964 /* PBXBookmark */ = EEE4871A0AD5FBB800714964 /* PBXBookmark */;
-			EEE487200AD5FBD600714964 /* PBXTextBookmark */ = EEE487200AD5FBD600714964 /* PBXTextBookmark */;
-			EEE487230AD5FBD600714964 /* PBXTextBookmark */ = EEE487230AD5FBD600714964 /* PBXTextBookmark */;
-			EEE487270AD5FC5000714964 /* PBXTextBookmark */ = EEE487270AD5FC5000714964 /* PBXTextBookmark */;
-			EEE487280AD5FC5000714964 /* PBXTextBookmark */ = EEE487280AD5FC5000714964 /* PBXTextBookmark */;
-			EEE487410AD5FFAE00714964 /* PBXBookmark */ = EEE487410AD5FFAE00714964 /* PBXBookmark */;
-			EEE487490AD5FFE800714964 /* PBXTextBookmark */ = EEE487490AD5FFE800714964 /* PBXTextBookmark */;
-			EEE4874A0AD5FFE800714964 /* PBXTextBookmark */ = EEE4874A0AD5FFE800714964 /* PBXTextBookmark */;
-			EEE4874F0AD5FFE900714964 /* PBXTextBookmark */ = EEE4874F0AD5FFE900714964 /* PBXTextBookmark */;
-			EEE487500AD5FFE900714964 /* PBXTextBookmark */ = EEE487500AD5FFE900714964 /* PBXTextBookmark */;
-			EEE487570AD6000D00714964 /* PBXTextBookmark */ = EEE487570AD6000D00714964 /* PBXTextBookmark */;
-			EEE487580AD6000D00714964 /* PBXTextBookmark */ = EEE487580AD6000D00714964 /* PBXTextBookmark */;
-			EEE487660AD6006100714964 /* PBXTextBookmark */ = EEE487660AD6006100714964 /* PBXTextBookmark */;
-			EEE487670AD6006100714964 /* PBXTextBookmark */ = EEE487670AD6006100714964 /* PBXTextBookmark */;
-			EEE4876A0AD600B000714964 /* PBXTextBookmark */ = EEE4876A0AD600B000714964 /* PBXTextBookmark */;
-			EEE4876D0AD600B600714964 /* PBXBookmark */ = EEE4876D0AD600B600714964 /* PBXBookmark */;
-			EEE487700AD600BA00714964 /* PBXTextBookmark */ = EEE487700AD600BA00714964 /* PBXTextBookmark */;
-			EEE487710AD600BA00714964 /* PBXTextBookmark */ = EEE487710AD600BA00714964 /* PBXTextBookmark */;
-			EEE487750AD600F000714964 /* PBXTextBookmark */ = EEE487750AD600F000714964 /* PBXTextBookmark */;
-			EEE487760AD600F000714964 /* PBXTextBookmark */ = EEE487760AD600F000714964 /* PBXTextBookmark */;
-			EEE487790AD6014400714964 /* PBXTextBookmark */ = EEE487790AD6014400714964 /* PBXTextBookmark */;
-			EEE4877A0AD6014400714964 /* PBXTextBookmark */ = EEE4877A0AD6014400714964 /* PBXTextBookmark */;
-			EEE4877B0AD6014F00714964 /* PBXBookmark */ = EEE4877B0AD6014F00714964 /* PBXBookmark */;
-			EEE487800AD601A400714964 /* PBXTextBookmark */ = EEE487800AD601A400714964 /* PBXTextBookmark */;
-			EEE487830AD601A400714964 /* PBXTextBookmark */ = EEE487830AD601A400714964 /* PBXTextBookmark */;
-			EEE487840AD601A400714964 /* PBXTextBookmark */ = EEE487840AD601A400714964 /* PBXTextBookmark */;
-			EEE4878D0AD602B500714964 /* PBXTextBookmark */ = EEE4878D0AD602B500714964 /* PBXTextBookmark */;
-			EEE4878E0AD602B500714964 /* PBXTextBookmark */ = EEE4878E0AD602B500714964 /* PBXTextBookmark */;
-			EEE487950AD602E000714964 /* PBXTextBookmark */ = EEE487950AD602E000714964 /* PBXTextBookmark */;
-			EEE487960AD602E000714964 /* PBXTextBookmark */ = EEE487960AD602E000714964 /* PBXTextBookmark */;
-			EEE487990AD6035700714964 /* PBXTextBookmark */ = EEE487990AD6035700714964 /* PBXTextBookmark */;
-			EEE4879A0AD6035700714964 /* PBXTextBookmark */ = EEE4879A0AD6035700714964 /* PBXTextBookmark */;
-			EEE487A00AD6146900714964 /* PBXBookmark */ = EEE487A00AD6146900714964 /* PBXBookmark */;
-			EEE487A50AD614DF00714964 /* PBXTextBookmark */ = EEE487A50AD614DF00714964 /* PBXTextBookmark */;
+			EEE487D60AD643E000714964 = EEE487D60AD643E000714964 /* PBXBookmark */;
+			EEE487F00AD645F900714964 = EEE487F00AD645F900714964 /* PBXTextBookmark */;
+			EEE489010AD65A9000714964 = EEE489010AD65A9000714964 /* PBXTextBookmark */;
+			EEE489020AD65A9000714964 = EEE489020AD65A9000714964 /* PBXTextBookmark */;
 		};
 		sourceControlManager = EE0641790A6B62AD0023C0F1 /* Source Control */;
 		userBuildSettings = {
@@ -240,6 +222,170 @@
 			sepNavVisRect = "{{0, 0}, {713, 431}}";
 			sepNavWindowFrame = "{{61, 571}, {758, 560}}";
 		};
+	};
+	EE01433D0AD6D8B100CB7415 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: parse error before 'AT_NAME' token";
+		fRef = EE892F330AD4E0060058F163 /* InstallEngine.h */;
+		rLen = 1;
+		rLoc = 17;
+		rType = 1;
+	};
+	EE01433E0AD6D8B100CB7415 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EE892F330AD4E0060058F163 /* InstallEngine.h */;
+		name = "InstallEngine.h: umodDone:";
+		rLen = 0;
+		rLoc = 280;
+		rType = 0;
+		vrLen = 191;
+		vrLoc = 145;
+	};
+	EE0143470AD6D8BA00CB7415 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EE892F330AD4E0060058F163 /* InstallEngine.h */;
+		name = "InstallEngine.h: umodDone:";
+		rLen = 0;
+		rLoc = 280;
+		rType = 0;
+		vrLen = 191;
+		vrLoc = 145;
+	};
+	EE0143480AD6D8BA00CB7415 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "warning: unused variable 'starter'";
+		fRef = EE8992A10AD0B27900AC5B87 /* Progress.m */;
+		rLen = 1;
+		rLoc = 45;
+		rType = 1;
+	};
+	EE0143490AD6D8BA00CB7415 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EE892F330AD4E0060058F163 /* InstallEngine.h */;
+		name = "InstallEngine.h: umodDone:";
+		rLen = 0;
+		rLoc = 280;
+		rType = 0;
+		vrLen = 191;
+		vrLoc = 145;
+	};
+	EE01434A0AD6D8BA00CB7415 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EE8992A10AD0B27900AC5B87 /* Progress.m */;
+		name = "NSTimer *starter=[NSTimer scheduledTimerWithTimeInterval: 2.0 target: self selector: @selector(start:) userInfo: nil repeats: NO];";
+		rLen = 132;
+		rLoc = 1196;
+		rType = 0;
+		vrLen = 312;
+		vrLoc = 1092;
+	};
+	EE01434E0AD6D8BD00CB7415 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EE892F340AD4E0060058F163 /* InstallEngine.m */;
+		name = "InstallEngine.m: 116";
+		rLen = 0;
+		rLoc = 3678;
+		rType = 0;
+		vrLen = 932;
+		vrLoc = 3480;
+	};
+	EE0143570AD6D9D800CB7415 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EE8992A10AD0B27900AC5B87 /* Progress.m */;
+		name = "NSTimer *starter=[NSTimer scheduledTimerWithTimeInterval: 2.0 target: self selector: @selector(start:) userInfo: nil repeats: NO];";
+		rLen = 132;
+		rLoc = 1196;
+		rType = 0;
+		vrLen = 312;
+		vrLoc = 1092;
+	};
+	EE0143580AD6D9D800CB7415 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: redefinition of 'data'";
+		fRef = EE892F340AD4E0060058F163 /* InstallEngine.m */;
+		rLen = 0;
+		rLoc = 99;
+		rType = 1;
+	};
+	EE0143590AD6D9D800CB7415 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EE8992A10AD0B27900AC5B87 /* Progress.m */;
+		name = "NSTimer *starter=[NSTimer scheduledTimerWithTimeInterval: 2.0 target: self selector: @selector(start:) userInfo: nil repeats: NO];";
+		rLen = 132;
+		rLoc = 1196;
+		rType = 0;
+		vrLen = 312;
+		vrLoc = 1092;
+	};
+	EE01435A0AD6D9D800CB7415 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EE892F340AD4E0060058F163 /* InstallEngine.m */;
+		name = "NSData* data=[file readDataToEndOfFile];";
+		rLen = 1;
+		rLoc = 3566;
+		rType = 0;
+		vrLen = 422;
+		vrLoc = 3891;
+	};
+	EE0143600AD6D9FF00CB7415 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EE892F340AD4E0060058F163 /* InstallEngine.m */;
+		name = "InstallEngine.m: 114";
+		rLen = 0;
+		rLoc = 3566;
+		rType = 0;
+		vrLen = 904;
+		vrLoc = 3480;
+	};
+	EE0143650AD6DAE000CB7415 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EE892F340AD4E0060058F163 /* InstallEngine.m */;
+		name = "InstallEngine.m: 116";
+		rLen = 0;
+		rLoc = 3676;
+		rType = 0;
+		vrLen = 949;
+		vrLoc = 3480;
+	};
+	EE0143680AD6DB5500CB7415 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EE892F340AD4E0060058F163 /* InstallEngine.m */;
+		name = "InstallEngine.m: 100";
+		rLen = 0;
+		rLoc = 3566;
+		rType = 0;
+		vrLen = 733;
+		vrLoc = 3265;
+	};
+	EE01436E0AD6DBC500CB7415 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EE892F340AD4E0060058F163 /* InstallEngine.m */;
+		name = "InstallEngine.m: 121";
+		rLen = 0;
+		rLoc = 4372;
+		rType = 0;
+		vrLen = 858;
+		vrLoc = 3681;
+	};
+	EE0143710AD6DBF600CB7415 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EE892F340AD4E0060058F163 /* InstallEngine.m */;
+		name = "InstallEngine.m: 114";
+		rLen = 0;
+		rLoc = 4188;
+		rType = 0;
+		vrLen = 875;
+		vrLoc = 3681;
+	};
+	EE0143750AD6DC3D00CB7415 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EE892F340AD4E0060058F163 /* InstallEngine.m */;
+		name = "InstallEngine.m: 109";
+		rLen = 0;
+		rLoc = 3950;
+		rType = 0;
+		vrLen = 860;
+		vrLoc = 3681;
 	};
 	EE06416B0A6B62AB0023C0F1 /* UT2k4 Mod Installer */ = {
 		isa = PBXExecutable;
@@ -292,10 +438,10 @@
 	};
 	EE0F690A0ACCCB4100DB4634 /* MainWindow.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1460, 3164}}";
-			sepNavSelRange = "{5040, 0}";
-			sepNavVisRect = "{{0, 1643}, {713, 431}}";
-			sepNavWindowFrame = "{{322, 306}, {758, 560}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1460, 3108}}";
+			sepNavSelRange = "{387, 120}";
+			sepNavVisRect = "{{557, 0}, {713, 431}}";
+			sepNavWindowFrame = "{{537, 484}, {758, 560}}";
 		};
 	};
 	EE2363800ACF05E200957E16 /* at_sign.png */ = {
@@ -309,40 +455,20 @@
 		objects = (
 		);
 	};
-	EE84C95C0AD5C4F100525842 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EE8992A00AD0B27900AC5B87 /* Progress.h */;
-		name = "Progress.h: start:";
-		rLen = 0;
-		rLoc = 511;
-		rType = 0;
-		vrLen = 561;
-		vrLoc = 0;
-	};
-	EE84C9970AD5C66A00525842 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EE8992A00AD0B27900AC5B87 /* Progress.h */;
-		name = "Progress.h: start:";
-		rLen = 0;
-		rLoc = 511;
-		rType = 0;
-		vrLen = 561;
-		vrLoc = 0;
-	};
 	EE892F330AD4E0060058F163 /* InstallEngine.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {453, 266}}";
-			sepNavSelRange = "{269, 0}";
-			sepNavVisRect = "{{0, 80}, {453, 186}}";
+			sepNavIntBoundsRect = "{{0, 0}, {453, 280}}";
+			sepNavSelRange = "{330, 0}";
+			sepNavVisRect = "{{0, 94}, {453, 186}}";
 			sepNavWindowFrame = "{{421, 411}, {758, 560}}";
 		};
 	};
 	EE892F340AD4E0060058F163 /* InstallEngine.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {776, 1414}}";
-			sepNavSelRange = "{2162, 0}";
-			sepNavVisRect = "{{0, 912}, {713, 431}}";
-			sepNavWindowFrame = "{{513, 170}, {758, 560}}";
+			sepNavIntBoundsRect = "{{0, 0}, {776, 1806}}";
+			sepNavSelRange = "{3958, 0}";
+			sepNavVisRect = "{{0, 1350}, {713, 431}}";
+			sepNavWindowFrame = "{{451, 150}, {758, 560}}";
 		};
 	};
 	EE8992A00AD0B27900AC5B87 /* Progress.h */ = {
@@ -356,8 +482,8 @@
 	EE8992A10AD0B27900AC5B87 /* Progress.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {824, 1148}}";
-			sepNavSelRange = "{2370, 0}";
-			sepNavVisRect = "{{0, 717}, {713, 431}}";
+			sepNavSelRange = "{1196, 132}";
+			sepNavVisRect = "{{0, 544}, {453, 186}}";
 			sepNavWindowFrame = "{{275, 386}, {758, 560}}";
 		};
 	};
@@ -394,336 +520,38 @@
 			sepNavWindowFrame = "{{15, 613}, {758, 560}}";
 		};
 	};
-	EEE487000AD5C6BE00714964 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EE8992A00AD0B27900AC5B87 /* Progress.h */;
-		name = "Progress.h: start:";
-		rLen = 0;
-		rLoc = 511;
-		rType = 0;
-		vrLen = 561;
-		vrLoc = 0;
-	};
-	EEE487120AD5DB3F00714964 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EE8992A00AD0B27900AC5B87 /* Progress.h */;
-		name = "Progress.h: start:";
-		rLen = 0;
-		rLoc = 511;
-		rType = 0;
-		vrLen = 561;
-		vrLoc = 0;
-	};
-	EEE487190AD5FBAF00714964 /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = EE8992A00AD0B27900AC5B87 /* Progress.h */;
-	};
-	EEE4871A0AD5FBB800714964 /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = EE8992A10AD0B27900AC5B87 /* Progress.m */;
-	};
-	EEE487200AD5FBD600714964 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EE8992A10AD0B27900AC5B87 /* Progress.m */;
-		name = "Progress.m: 66";
-		rLen = 0;
-		rLoc = 1330;
-		rType = 0;
-		vrLen = 727;
-		vrLoc = 1504;
-	};
-	EEE487230AD5FBD600714964 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EE8992A00AD0B27900AC5B87 /* Progress.h */;
-		name = "Progress.h: windowLoaded:";
-		rLen = 0;
-		rLoc = 426;
-		rType = 0;
-		vrLen = 540;
-		vrLoc = 0;
-	};
-	EEE487270AD5FC5000714964 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EE8992A10AD0B27900AC5B87 /* Progress.m */;
-		name = "Progress.m: 45";
-		rLen = 0;
-		rLoc = 1258;
-		rType = 0;
-		vrLen = 743;
-		vrLoc = 967;
-	};
-	EEE487280AD5FC5000714964 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EE8992A00AD0B27900AC5B87 /* Progress.h */;
-		name = "Progress.h: windowLoaded:";
-		rLen = 0;
-		rLoc = 426;
-		rType = 0;
-		vrLen = 540;
-		vrLoc = 0;
-	};
-	EEE487410AD5FFAE00714964 /* PBXBookmark */ = {
+	EEE487D60AD643E000714964 /* PBXBookmark */ = {
 		isa = PBXBookmark;
 		fRef = EE0F690A0ACCCB4100DB4634 /* MainWindow.m */;
 	};
-	EEE487490AD5FFE800714964 /* PBXTextBookmark */ = {
+	EEE487F00AD645F900714964 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		comments = "error: parse error before 'id'";
-		fRef = EE892F330AD4E0060058F163 /* InstallEngine.h */;
-		rLen = 1;
-		rLoc = 16;
-		rType = 1;
-	};
-	EEE4874A0AD5FFE800714964 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EE892F330AD4E0060058F163 /* InstallEngine.h */;
-		name = "InstallEngine.h: umod_install:";
+		fRef = EE892F340AD4E0060058F163 /* InstallEngine.m */;
+		name = readDataToEndOfFile;
 		rLen = 0;
-		rLoc = 269;
+		rLoc = 3566;
 		rType = 0;
-		vrLen = 195;
-		vrLoc = 91;
+		vrLen = 1291;
+		vrLoc = 2982;
 	};
-	EEE4874F0AD5FFE900714964 /* PBXTextBookmark */ = {
+	EEE489010AD65A9000714964 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EE892F340AD4E0060058F163 /* InstallEngine.m */;
+		name = "InstallEngine.m: 107";
+		rLen = 0;
+		rLoc = 3698;
+		rType = 0;
+		vrLen = 1328;
+		vrLoc = 3127;
+	};
+	EEE489020AD65A9000714964 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = EE0F690A0ACCCB4100DB4634 /* MainWindow.m */;
-		name = "MainWindow.m: 109";
+		name = "MainWindow.m: data";
 		rLen = 0;
-		rLoc = 4264;
+		rLoc = 6505;
 		rType = 0;
-		vrLen = 1015;
-		vrLoc = 4266;
-	};
-	EEE487500AD5FFE900714964 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EE8992A00AD0B27900AC5B87 /* Progress.h */;
-		name = "Progress.h: windowLoaded:";
-		rLen = 0;
-		rLoc = 426;
-		rType = 0;
-		vrLen = 518;
-		vrLoc = 0;
-	};
-	EEE487570AD6000D00714964 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EE0F690A0ACCCB4100DB4634 /* MainWindow.m */;
-		name = "MainWindow.m: 109";
-		rLen = 0;
-		rLoc = 4264;
-		rType = 0;
-		vrLen = 1571;
-		vrLoc = 3058;
-	};
-	EEE487580AD6000D00714964 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EE8992A00AD0B27900AC5B87 /* Progress.h */;
-		name = "Progress.h: windowLoaded:";
-		rLen = 0;
-		rLoc = 426;
-		rType = 0;
-		vrLen = 518;
-		vrLoc = 0;
-	};
-	EEE487660AD6006100714964 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EE0F690A0ACCCB4100DB4634 /* MainWindow.m */;
-		name = "MainWindow.m: release";
-		rLen = 0;
-		rLoc = 5040;
-		rType = 0;
-		vrLen = 768;
-		vrLoc = 4630;
-	};
-	EEE487670AD6006100714964 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EE8992A00AD0B27900AC5B87 /* Progress.h */;
-		name = "Progress.h: windowLoaded:";
-		rLen = 0;
-		rLoc = 426;
-		rType = 0;
-		vrLen = 518;
-		vrLoc = 0;
-	};
-	EEE4876A0AD600B000714964 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EE892F330AD4E0060058F163 /* InstallEngine.h */;
-		name = "InstallEngine.h: umod_install:";
-		rLen = 0;
-		rLoc = 269;
-		rType = 0;
-		vrLen = 195;
-		vrLoc = 91;
-	};
-	EEE4876D0AD600B600714964 /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = EE892F340AD4E0060058F163 /* InstallEngine.m */;
-	};
-	EEE487700AD600BA00714964 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EE892F340AD4E0060058F163 /* InstallEngine.m */;
-		name = "InstallEngine.m: 60";
-		rLen = 0;
-		rLoc = 2207;
-		rType = 0;
-		vrLen = 994;
-		vrLoc = 1666;
-	};
-	EEE487710AD600BA00714964 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EE8992A00AD0B27900AC5B87 /* Progress.h */;
-		name = "Progress.h: windowLoaded:";
-		rLen = 0;
-		rLoc = 426;
-		rType = 0;
-		vrLen = 518;
-		vrLoc = 0;
-	};
-	EEE487750AD600F000714964 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EE892F340AD4E0060058F163 /* InstallEngine.m */;
-		name = "InstallEngine.m: zip_install:";
-		rLen = 0;
-		rLoc = 2821;
-		rType = 0;
-		vrLen = 1049;
-		vrLoc = 1668;
-	};
-	EEE487760AD600F000714964 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EE8992A00AD0B27900AC5B87 /* Progress.h */;
-		name = "Progress.h: windowLoaded:";
-		rLen = 0;
-		rLoc = 426;
-		rType = 0;
-		vrLen = 518;
-		vrLoc = 0;
-	};
-	EEE487790AD6014400714964 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EE892F340AD4E0060058F163 /* InstallEngine.m */;
-		name = "InstallEngine.m: 73";
-		rLen = 0;
-		rLoc = 2821;
-		rType = 0;
-		vrLen = 1014;
-		vrLoc = 1773;
-	};
-	EEE4877A0AD6014400714964 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EE8992A00AD0B27900AC5B87 /* Progress.h */;
-		name = "Progress.h: windowLoaded:";
-		rLen = 0;
-		rLoc = 426;
-		rType = 0;
-		vrLen = 518;
-		vrLoc = 0;
-	};
-	EEE4877B0AD6014F00714964 /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = EE8992A10AD0B27900AC5B87 /* Progress.m */;
-	};
-	EEE487800AD601A400714964 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EE892F340AD4E0060058F163 /* InstallEngine.m */;
-		name = "InstallEngine.m: zip_install:";
-		rLen = 0;
-		rLoc = 2585;
-		rType = 0;
-		vrLen = 1112;
-		vrLoc = 2055;
-	};
-	EEE487830AD601A400714964 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EE8992A10AD0B27900AC5B87 /* Progress.m */;
-		name = "-(void) start: (NSTimer*) timer";
-		rLen = 31;
-		rLoc = 1405;
-		rType = 0;
-		vrLen = 1091;
-		vrLoc = 1194;
-	};
-	EEE487840AD601A400714964 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EE8992A00AD0B27900AC5B87 /* Progress.h */;
-		name = "Progress.h: windowLoaded:";
-		rLen = 0;
-		rLoc = 426;
-		rType = 0;
-		vrLen = 518;
-		vrLoc = 0;
-	};
-	EEE4878D0AD602B500714964 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EE8992A10AD0B27900AC5B87 /* Progress.m */;
-		name = "Progress.m: 71";
-		rLen = 0;
-		rLoc = 2239;
-		rType = 0;
-		vrLen = 1123;
-		vrLoc = 1384;
-	};
-	EEE4878E0AD602B500714964 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EE8992A00AD0B27900AC5B87 /* Progress.h */;
-		name = "Progress.h: windowLoaded:";
-		rLen = 0;
-		rLoc = 426;
-		rType = 0;
-		vrLen = 518;
-		vrLoc = 0;
-	};
-	EEE487950AD602E000714964 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EE8992A10AD0B27900AC5B87 /* Progress.m */;
-		name = "Progress.m: 72";
-		rLen = 0;
-		rLoc = 2298;
-		rType = 0;
-		vrLen = 1123;
-		vrLoc = 1384;
-	};
-	EEE487960AD602E000714964 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EE8992A00AD0B27900AC5B87 /* Progress.h */;
-		name = "Progress.h: windowLoaded:";
-		rLen = 0;
-		rLoc = 426;
-		rType = 0;
-		vrLen = 518;
-		vrLoc = 0;
-	};
-	EEE487990AD6035700714964 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EE8992A10AD0B27900AC5B87 /* Progress.m */;
-		name = "Progress.m: start:";
-		rLen = 0;
-		rLoc = 2400;
-		rType = 0;
-		vrLen = 1125;
-		vrLoc = 1386;
-	};
-	EEE4879A0AD6035700714964 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EE8992A00AD0B27900AC5B87 /* Progress.h */;
-		name = "Progress.h: windowLoaded:";
-		rLen = 0;
-		rLoc = 426;
-		rType = 0;
-		vrLen = 518;
-		vrLoc = 0;
-	};
-	EEE487A00AD6146900714964 /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = EE892F340AD4E0060058F163 /* InstallEngine.m */;
-	};
-	EEE487A50AD614DF00714964 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EE892F340AD4E0060058F163 /* InstallEngine.m */;
-		name = "InstallEngine.m: 59";
-		rLen = 0;
-		rLoc = 2162;
-		rType = 0;
-		vrLen = 975;
-		vrLoc = 2398;
+		vrLen = 1933;
+		vrLoc = 5596;
 	};
 }

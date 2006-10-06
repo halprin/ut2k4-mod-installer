@@ -33,7 +33,7 @@
 	NSFileHandle *file=[pipe fileHandleForReading];
 	//execute and read
 	[task launch];
-	NSData* data=[file readDataToEndOfFile];
+	NSData *data=[file readDataToEndOfFile];
 	NSString *contents=[NSString stringWithUTF8String: [data bytes]];
 	
 	//find how many elements and set that to the max size of the progress bar
@@ -86,7 +86,35 @@
 	NSString *ut_path=[info objectAtIndex: 1];
 	NSProgressIndicator *progress_bar=[info objectAtIndex: 2];
 	
-	NSLog(@"UMOD install not implemented yet");
+	//get the path to the ucc-bin program
+	NSString *ucc_path=[ut_path stringByAppendingPathComponent: @"System"];
+	ucc_path=[ucc_path stringByAppendingPathComponent: @"ucc-bin"];
+	
+	//set up for finding out the files in the UMOD
+	NSTask *task=[[NSTask alloc] init];
+	[task setLaunchPath: ucc_path];
+	NSArray *args=[NSArray arrayWithObjects: @"umodunpack", @"-l", mod_path, @"-nohomedir", nil];
+	[task setArguments: args];
+	//execute and read
+	[task launch];
+	[task waitUntilExit];
+	NSString *contents=[NSString stringWithContentsOfFile: [ut_path stringByAppendingString: @"/System/ucc.log"]];
+	
+	NSLog(contents);
+	
+	//find how many elements and set that to the max size of the progress bar
+	NSArray *elements=[contents componentsSeparatedByString: @"\n"];
+	NSMutableArray *elem_temp=[NSMutableArray arrayWithArray: elements];
+	//for(
+	[elem_temp removeLastObject];
+	//for(
+	[elem_temp removeObjectAtIndex: 0];
+	elements=[NSArray arrayWithArray: elem_temp];
+	[progress_bar setIndeterminate: NO];
+	[progress_bar setMaxValue: ((double)[elements count])];
+	NSLog([elements objectAtIndex: [elements count]-1]);
+	
+	
 	
 	[progress_bar setDoubleValue: [progress_bar maxValue]];
 	
