@@ -54,7 +54,7 @@
 
 -(void) start: (NSTimer*) timer
 {
-	NSArray *senter=[NSArray arrayWithObjects: mod_path, ut_path, progress_bar, nil];
+	NSArray *senter=[NSArray arrayWithObjects: mod_path, ut_path, progress_bar, status_text, nil];
 	if([zip_umod isEqualToString: @"zip"])  //it is a zip mod
 	{
 		[NSThread detachNewThreadSelector: @selector(zip_install:) toTarget: [InstallEngine class] withObject: senter];
@@ -69,7 +69,7 @@
 	}
 	
 	//show that the process has finished at least for tiny bit
-	NSTimer *ender=[NSTimer scheduledTimerWithTimeInterval: 1.0 target: self selector: @selector(end:) userInfo: nil repeats: NO];
+	NSTimer *ender=[NSTimer scheduledTimerWithTimeInterval: 3.0 target: self selector: @selector(end:) userInfo: nil repeats: NO];
 }
 
 -(void) end: (NSTimer*) timer

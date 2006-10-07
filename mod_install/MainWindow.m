@@ -83,7 +83,7 @@
 	}
 }
 
-- (IBAction)installMod:(id)sender
+- (IBAction)installMod: (id)sender
 {
 	//need to make sure that UT2k4 and the mod really exist as the user could
 	//of entered the path manually
@@ -102,15 +102,12 @@
 		}
 		else  //the mod does exist
 		{
-			//I might need to remove this next line possibly if the person wants to install another mod right after another
-			//if(controller==nil)  //if the controller hasn't been created yet
-			//{
-				controller = [[Progress alloc] initWithWindowNibName: @"ProgressWindow"];
-			//}
+			controller = [[Progress alloc] initWithWindowNibName: @"ProgressWindow"];
 			
 			//pass the UT2k4 and mod path to the new progress window
 			[controller setUT: [ut_path stringValue]];
 			[controller setMod: [mod_path stringValue]];
+			BOOL nope=NO;
 			//tell the new progress window weather it is a zip or a umod we are doing
 			if([[zip_umod cellAtRow: 0 column: 0] state]==1)  //ZIP is selected in the Radio control
 			{
@@ -119,6 +116,13 @@
 			else if([[zip_umod cellAtRow: 0 column: 1] state]==1)  //UMOD is selected in the Radio control
 			{
 				[controller setZU: @"umod"];
+				//The program takes care of spaces in the file path but we are not allowed to have spaces in the UMOD file itself w/o actually changing the name (and I don't want to do that)
+				NSArray *spaces=[[[mod_path stringValue] lastPathComponent] componentsSeparatedByString: @" "];
+				if([spaces count]>1)  //we have spaces!
+				{
+					NSBeginAlertSheet(@"Spaces in UMOD file!", @"OK", nil, nil, window, self, nil, nil, nil, @"Please remove the spaces in the UMOD file before continuing.");
+					nope=YES;
+				}
 			}
 			else  //This should never execute, if so, BUG!
 			{
@@ -126,9 +130,23 @@
 			} 
 			
 			//display the sheet!
-			[NSApp beginSheet: [controller window] modalForWindow: window modalDelegate: self didEndSelector: nil contextInfo: nil];
+			if(nope!=YES)  //UMOD file doesn't have spaces
+			{
+				[NSApp beginSheet: [controller window] modalForWindow: window modalDelegate: self didEndSelector: nil contextInfo: nil];
+			}
 			
 			[controller release];
+			
+			//write the path to a new preference file
+			BOOL deleted=[exists removeFileAtPath: [@"~/Library/Preferences/com.atPAK.04ModInstallerPrefs.plist" stringByExpandingTildeInPath] handler: self];
+			if(deleted==NO)
+			{
+				NSLog(@"New prefs can't be overriden!");
+			}
+			NSMutableDictionary *root=[NSMutableDictionary dictionary];
+			[root setValue: [ut_path stringValue] forKey: @"UTpath"];
+			[NSKeyedArchiver archiveRootObject: root toFile: [@"~/Library/Preferences/com.atPAK.04ModInstallerPrefs.plist" stringByExpandingTildeInPath]];
+			//now delete the old pref file if they are there cause it sucks!
 		}
 	}
 }
@@ -178,7 +196,7 @@
 		//write the path to a new preference file
 		NSMutableDictionary *root=[NSMutableDictionary dictionary];
 		[root setValue: path_temp forKey: @"UTpath"];
-		[NSKeyedArchiver archiveRootObject: root toFile: [[@"~/Library/Preferences/com.atPAK.04ModInstallerPrefs.plist" stringByExpandingTildeInPath] stringByExpandingTildeInPath]];
+		[NSKeyedArchiver archiveRootObject: root toFile: [@"~/Library/Preferences/com.atPAK.04ModInstallerPrefs.plist" stringByExpandingTildeInPath]];
 		//now delete the old pref file if they are there cause it sucks!
 		BOOL deleted=[prefs removeFileAtPath: [@"~/Library/Preferences/Mod_installer_prefs.txt" stringByExpandingTildeInPath] handler: self];
 		if(deleted==NO)
