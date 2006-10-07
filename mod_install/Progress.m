@@ -50,6 +50,7 @@
 -(void) installDone: (NSNotification*) notification
 {
 	inst_done=YES;
+	NSLog(@"Done and waiting...");
 }
 
 -(void) start: (NSTimer*) timer

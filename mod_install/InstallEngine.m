@@ -47,7 +47,6 @@
 	[progress_bar setIndeterminate: NO];
 	[progress_bar setMaxValue: ((double)[elements count])];
 	
-	NSLog(@"Starting actual installation!");
 	//time for the actual unstuffing
 	task=[[NSTask alloc] init];
 	[task setLaunchPath: zip_path];
