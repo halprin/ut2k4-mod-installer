@@ -3,7 +3,7 @@
 //  UT2k4 Mod Installer
 //
 //  Created by Peter Kendall on 10/5/06.
-//  Copyright 2006 __MyCompanyName__. All rights reserved.
+//  Copyright 2006 @PAK software. All rights reserved.
 //
 
 #import "InstallEngine.h"

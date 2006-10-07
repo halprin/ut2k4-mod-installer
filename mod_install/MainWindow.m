@@ -104,6 +104,12 @@
 			if([[zip_umod cellAtRow: 0 column: 0] state]==1)  //ZIP is selected in the Radio control
 			{
 				[controller setZU: @"zip"];
+				//make sure we have the correct kind of file to install
+				if([[[[mod_path stringValue] pathExtension] lowercaseString] isEqualToString: @"zip"]==NO)  //it isn't a zip file
+				{
+					NSBeginAlertSheet(@"Mod file is not a ZIP!", @"OK", nil, nil, window, self, nil, nil, nil, @"You selected to install a ZIP but the mod file does not appear to be a ZIP file.");
+					nope=YES;
+				}
 			}
 			else if([[zip_umod cellAtRow: 0 column: 1] state]==1)  //UMOD is selected in the Radio control
 			{
@@ -113,6 +119,12 @@
 				if([spaces count]>1)  //we have spaces!
 				{
 					NSBeginAlertSheet(@"Spaces in UMOD file!", @"OK", nil, nil, window, self, nil, nil, nil, @"Please remove the spaces in the UMOD file before continuing.");
+					nope=YES;
+				}
+				//make sure we have the correct kind of file to install
+				if([[[[mod_path stringValue] pathExtension] lowercaseString] isEqualToString: @"umod"]==NO  || [[[[mod_path stringValue] pathExtension] lowercaseString] isEqualToString: @"ut4mod"]==NO)  //it isn't a UMOD file
+				{
+					NSBeginAlertSheet(@"Mod file is not a UMOD!", @"OK", nil, nil, window, self, nil, nil, nil, @"You selected to install a UMOD but the mod file does not appear to be a UMOD file.");
 					nope=YES;
 				}
 			}

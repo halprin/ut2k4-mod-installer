@@ -12,7 +12,6 @@
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		EE0F690B0ACCCB4100DB4634 /* MainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0F690A0ACCCB4100DB4634 /* MainWindow.m */; };
-		EE2363810ACF05E200957E16 /* at_sign.png in Resources */ = {isa = PBXBuildFile; fileRef = EE2363800ACF05E200957E16 /* at_sign.png */; };
 		EE23639F0ACF06BC00957E16 /* unzip in Resources */ = {isa = PBXBuildFile; fileRef = EE23639E0ACF06BC00957E16 /* unzip */; };
 		EE892F350AD4E0060058F163 /* InstallEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = EE892F340AD4E0060058F163 /* InstallEngine.m */; };
 		EE89920B0AD0962400AC5B87 /* ProgressWindow.nib in Resources */ = {isa = PBXBuildFile; fileRef = EE89920A0AD0962400AC5B87 /* ProgressWindow.nib */; };
@@ -185,7 +184,6 @@
 				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				EEC905F40ACDEE5300AD2F02 /* mod_install.icns in Resources */,
-				EE2363810ACF05E200957E16 /* at_sign.png in Resources */,
 				EE23639F0ACF06BC00957E16 /* unzip in Resources */,
 				EE89920B0AD0962400AC5B87 /* ProgressWindow.nib in Resources */,
 				EEA6E24D0AD20AC100D5B54B /* Credits.html in Resources */,

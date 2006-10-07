@@ -50,12 +50,17 @@
 -(void) installDone: (NSNotification*) notification
 {
 	inst_done=YES;
-	NSLog(@"Done and waiting...");
+	NSTimer *ender=[NSTimer scheduledTimerWithTimeInterval: 3.0 target: self selector: @selector(end:) userInfo: nil repeats: NO];
+	NSRunLoop *theRL=[NSRunLoop currentRunLoop];
+	while([theRL runMode: NSDefaultRunLoopMode beforeDate: [NSDate distantFuture]]);
 }
 
 -(void) start: (NSTimer*) timer
 {
 	NSArray *senter=[NSArray arrayWithObjects: mod_path, ut_path, progress_bar, status_text, nil];
+	
+	int k; for(k = 0; k < [senter count]; k++) NSLog(@"%@", [senter objectAtIndex:k]);
+	
 	if([zip_umod isEqualToString: @"zip"])  //it is a zip mod
 	{
 		[NSThread detachNewThreadSelector: @selector(zip_install:) toTarget: [InstallEngine class] withObject: senter];
@@ -68,9 +73,6 @@
 		NSRunLoop *theRL=[NSRunLoop currentRunLoop];
 		while(inst_done==NO && [theRL runMode: NSDefaultRunLoopMode beforeDate: [NSDate distantFuture]]);
 	}
-	
-	//show that the process has finished at least for tiny bit
-	NSTimer *ender=[NSTimer scheduledTimerWithTimeInterval: 3.0 target: self selector: @selector(end:) userInfo: nil repeats: NO];
 }
 
 -(void) end: (NSTimer*) timer
