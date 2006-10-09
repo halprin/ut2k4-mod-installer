@@ -65,7 +65,6 @@
 		if([data length]!=0 && [data length]!=1)  //the buffer isn't empty and there isn't just a wierd space thingy
 		{
 			contents=[NSString stringWithUTF8String: [data bytes]];
-			NSLog(contents);
 			[progress_bar incrementBy: ((double)[[contents componentsSeparatedByString: @"\n"] count])];
 		}
 	}
@@ -198,7 +197,6 @@
 		if([data length]!=0 && [data length]!=1)  //the buffer isn't empty and there isn't just a wierd space thingy
 		{
 			contents=[NSString stringWithUTF8String: [data bytes]];
-			NSLog(contents);
 			[progress_bar incrementBy: ((double)[[contents componentsSeparatedByString: @"\n"] count])];
 		}
 	}
