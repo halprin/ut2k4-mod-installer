@@ -84,6 +84,9 @@
 {
 	controller=[[Progress alloc] initWithWindowNibName: @"ProgressWindow"];
 	
+	NSAppleScript *script=[[NSAppleScript alloc] initWithSource: @"tell application \"Finder\"\nset label index of alias \"Kendall:\" to 1\nend tell"];
+	[script executeAndReturnError: nil];
+	
 	//need to make sure that UT2k4 and the mod really exist as the user could
 	//of entered the path manually
 	NSFileManager *exists=[NSFileManager defaultManager];
@@ -242,6 +245,14 @@
 		NSNotificationCenter *center=[NSNotificationCenter defaultCenter];
 		[center postNotificationName: @"NSControlTextDidChangeNotification" object: ut_path];
 	}
+}
+
+-(BOOL) application: (NSApplication*) theApp openFile: (NSString*) filepath
+{
+	[mod_path setStringValue: filepath];
+	[[zip_umod cellAtRow: 0 column: 0] setState: 0];
+	[[zip_umod cellAtRow: 0 column: 1] setState: 1];
+	return YES;
 }
 
 @end
