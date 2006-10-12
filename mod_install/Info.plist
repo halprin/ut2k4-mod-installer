@@ -12,6 +12,8 @@
 				<string>ut4mod,</string>
 				<string>umod</string>
 			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>umod_icon</string>
 			<key>CFBundleTypeName</key>
 			<string>UMOD file</string>
 			<key>CFBundleTypeRole</key>

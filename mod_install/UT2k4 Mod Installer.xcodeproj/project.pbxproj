@@ -12,6 +12,7 @@
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		EE0F690B0ACCCB4100DB4634 /* MainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0F690A0ACCCB4100DB4634 /* MainWindow.m */; };
+		EE15BC2C0ADDE1ED00B3A1CA /* umod_icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = EE15BC2B0ADDE1ED00B3A1CA /* umod_icon.icns */; };
 		EE23639F0ACF06BC00957E16 /* unzip in Resources */ = {isa = PBXBuildFile; fileRef = EE23639E0ACF06BC00957E16 /* unzip */; };
 		EE892F350AD4E0060058F163 /* InstallEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = EE892F340AD4E0060058F163 /* InstallEngine.m */; };
 		EE89920B0AD0962400AC5B87 /* ProgressWindow.nib in Resources */ = {isa = PBXBuildFile; fileRef = EE89920A0AD0962400AC5B87 /* ProgressWindow.nib */; };
@@ -33,6 +34,7 @@
 		8D1107320486CEB800E47090 /* UT2k4 Mod Installer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UT2k4 Mod Installer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE0F69090ACCCB4100DB4634 /* MainWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MainWindow.h; sourceTree = "<group>"; };
 		EE0F690A0ACCCB4100DB4634 /* MainWindow.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MainWindow.m; sourceTree = "<group>"; };
+		EE15BC2B0ADDE1ED00B3A1CA /* umod_icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = umod_icon.icns; sourceTree = "<group>"; };
 		EE2363800ACF05E200957E16 /* at_sign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = at_sign.png; sourceTree = "<group>"; };
 		EE23639E0ACF06BC00957E16 /* unzip */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = unzip; sourceTree = "<group>"; };
 		EE892F330AD4E0060058F163 /* InstallEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstallEngine.h; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EE15BC2B0ADDE1ED00B3A1CA /* umod_icon.icns */,
 				EEA6E24C0AD20AC100D5B54B /* Credits.html */,
 				EE89920A0AD0962400AC5B87 /* ProgressWindow.nib */,
 				EE2363800ACF05E200957E16 /* at_sign.png */,
@@ -187,6 +190,7 @@
 				EE23639F0ACF06BC00957E16 /* unzip in Resources */,
 				EE89920B0AD0962400AC5B87 /* ProgressWindow.nib in Resources */,
 				EEA6E24D0AD20AC100D5B54B /* Credits.html in Resources */,
+				EE15BC2C0ADDE1ED00B3A1CA /* umod_icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
