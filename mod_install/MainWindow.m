@@ -84,8 +84,8 @@
 {
 	controller=[[Progress alloc] initWithWindowNibName: @"ProgressWindow"];
 	
-	NSAppleScript *script=[[NSAppleScript alloc] initWithSource: @"tell application \"Finder\"\nset label index of alias \"Kendall:\" to 1\nend tell"];
-	[script executeAndReturnError: nil];
+	//NSAppleScript *script=[[NSAppleScript alloc] initWithSource: @"tell application \"Finder\"\nset label index of alias \"Kendall:\" to 1\nend tell"];
+	//[script executeAndReturnError: nil];
 	
 	//need to make sure that UT2k4 and the mod really exist as the user could
 	//of entered the path manually
@@ -125,7 +125,7 @@
 					nope=YES;
 				}
 				//make sure we have the correct kind of file to install
-				if([[[[mod_path stringValue] pathExtension] lowercaseString] isEqualToString: @"umod"]==NO  || [[[[mod_path stringValue] pathExtension] lowercaseString] isEqualToString: @"ut4mod"]==NO)  //it isn't a UMOD file
+				if([[[[mod_path stringValue] pathExtension] lowercaseString] isEqualToString: @"umod"]==NO  && [[[[mod_path stringValue] pathExtension] lowercaseString] isEqualToString: @"ut4mod"]==NO)  //it isn't a UMOD file
 				{
 					NSBeginAlertSheet(@"Mod file is not a UMOD!", @"OK", nil, nil, window, self, nil, nil, nil, @"You selected to install a UMOD but the mod file does not appear to be a UMOD file.");
 					nope=YES;
@@ -252,6 +252,9 @@
 	[mod_path setStringValue: filepath];
 	[[zip_umod cellAtRow: 0 column: 0] setState: 0];
 	[[zip_umod cellAtRow: 0 column: 1] setState: 1];
+	//send a notification that the text changed b/c the text box doesn't do it
+	NSNotificationCenter *center=[NSNotificationCenter defaultCenter];
+	[center postNotificationName: @"NSControlTextDidChangeNotification" object: ut_path];
 	return YES;
 }
 
