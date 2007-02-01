@@ -314,12 +314,12 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>EE30351C0B719C5200723484</string>
+										<string>EECA7F410B719E870024332D</string>
 										<key>history</key>
 										<array>
 											<string>EEBF7DCB0ACE516400430F61</string>
 											<string>EEA3330B0AD78A9900F0018B</string>
-											<string>EED36F260B49CEEA000F576B</string>
+											<string>EE30351C0B719C5200723484</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -382,9 +382,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>EE30350E0B719B7200723484</string>
+				<string>EECA7F420B719E870024332D</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>EE30350F0B719B7200723484</string>
+				<string>EECA7F430B719E870024332D</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -519,7 +519,7 @@
 	<key>WindowOrderList</key>
 	<array>
 		<string>1C0AD2B3069F1EA900FABCE6</string>
-		<string>/Users/halprin/Desktop/Peter/Studio Stuff/Programming/Cocoa/UT2k4 Mod Installer/UT2k4 Mod Installer.xcodeproj</string>
+		<string>/Users/halprin/Desktop/Peter/Studio Stuff/Programming/Cocoa/stuff/trunk/UT2k4 Mod Installer.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>461 368 690 397 0 0 1600 1178 </string>
@@ -961,9 +961,9 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C0AD2B3069F1EA900FABCE6</string>
-				<string>EE3035100B719B7200723484</string>
+				<string>EECA7F440B719E870024332D</string>
 				<string>1CD0528B0623707200166675</string>
-				<string>EE3035110B719B7200723484</string>
+				<string>EECA7F450B719E870024332D</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.run</string>
