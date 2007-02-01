@@ -39,7 +39,7 @@
 		EE23639E0ACF06BC00957E16 /* unzip */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = unzip; sourceTree = "<group>"; };
 		EE892F330AD4E0060058F163 /* InstallEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstallEngine.h; sourceTree = "<group>"; };
 		EE892F340AD4E0060058F163 /* InstallEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstallEngine.m; sourceTree = "<group>"; };
-		EE89920A0AD0962400AC5B87 /* ProgressWindow.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = ProgressWindow.nib; path = English.lproj/ProgressWindow.nib; sourceTree = "<group>"; };
+		EE89920A0AD0962400AC5B87 /* ProgressWindow.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = ProgressWindow.nib; sourceTree = "<group>"; };
 		EE8992A00AD0B27900AC5B87 /* Progress.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Progress.h; sourceTree = "<group>"; };
 		EE8992A10AD0B27900AC5B87 /* Progress.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Progress.m; sourceTree = "<group>"; };
 		EEA6E24C0AD20AC100D5B54B /* Credits.html */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html; path = Credits.html; sourceTree = "<group>"; };

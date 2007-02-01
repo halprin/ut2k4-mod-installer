@@ -9,7 +9,7 @@
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
-		activeBuildConfigurationName = Release;
+		activeBuildConfigurationName = Debug;
 		activeExecutable = EE06416B0A6B62AB0023C0F1 /* UT2k4 Mod Installer */;
 		activeTarget = 8D1107260486CEB800E47090 /* UT2k4 Mod Installer */;
 		addToTargets = (
@@ -183,18 +183,16 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 183016319;
-			PBXWorkspaceStateSaveDate = 183016319;
+			PBXPerProjectTemplateStateSaveDate = 191994723;
+			PBXWorkspaceStateSaveDate = 191994723;
 		};
 		perUserProjectItems = {
-			EE40ECEA0AE3706200E37FC1 = EE40ECEA0AE3706200E37FC1 /* PBXTextBookmark */;
-			EE40ECEB0AE3706200E37FC1 = EE40ECEB0AE3706200E37FC1 /* PBXTextBookmark */;
-			EE7F7D1C0AE36F700044DE62 = EE7F7D1C0AE36F700044DE62 /* PBXTextBookmark */;
-			EE7F7D1D0AE36F700044DE62 = EE7F7D1D0AE36F700044DE62 /* PBXTextBookmark */;
-			EEA3330B0AD78A9900F0018B = EEA3330B0AD78A9900F0018B /* PBXTextBookmark */;
-			EEA3330D0AD78A9900F0018B = EEA3330D0AD78A9900F0018B /* PBXTextBookmark */;
-			EEBF7DCB0ACE516400430F61 = EEBF7DCB0ACE516400430F61 /* PBXTextBookmark */;
-			EEBF7DCD0ACE516400430F61 = EEBF7DCD0ACE516400430F61 /* PBXTextBookmark */;
+			EE30351C0B719C5200723484 /* PBXTextBookmark */ = EE30351C0B719C5200723484 /* PBXTextBookmark */;
+			EEA3330B0AD78A9900F0018B /* PBXTextBookmark */ = EEA3330B0AD78A9900F0018B /* PBXTextBookmark */;
+			EEA3330D0AD78A9900F0018B /* PBXTextBookmark */ = EEA3330D0AD78A9900F0018B /* PBXTextBookmark */;
+			EEBF7DCB0ACE516400430F61 /* PBXTextBookmark */ = EEBF7DCB0ACE516400430F61 /* PBXTextBookmark */;
+			EEBF7DCD0ACE516400430F61 /* PBXTextBookmark */ = EEBF7DCD0ACE516400430F61 /* PBXTextBookmark */;
+			EED36F260B49CEEA000F576B /* PBXTextBookmark */ = EED36F260B49CEEA000F576B /* PBXTextBookmark */;
 		};
 		sourceControlManager = EE0641790A6B62AD0023C0F1 /* Source Control */;
 		userBuildSettings = {
@@ -261,7 +259,7 @@
 	EE0641790A6B62AD0023C0F1 /* Source Control */ = {
 		isa = PBXSourceControlManager;
 		fallbackIsa = XCSourceControlManager;
-		isSCMEnabled = 1;
+		isSCMEnabled = 0;
 		scmConfiguration = {
 			SubversionToolPath = /usr/local/bin/svn;
 		};
@@ -273,17 +271,17 @@
 	};
 	EE0F69090ACCCB4100DB4634 /* MainWindow.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {622, 322}}";
-			sepNavSelRange = "{591, 5}";
-			sepNavVisRect = "{{0, 138}, {622, 184}}";
+			sepNavIntBoundsRect = "{{0, 0}, {713, 431}}";
+			sepNavSelRange = "{462, 51}";
+			sepNavVisRect = "{{0, 0}, {713, 431}}";
 			sepNavWindowFrame = "{{56, 613}, {758, 560}}";
 		};
 	};
 	EE0F690A0ACCCB4100DB4634 /* MainWindow.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1460, 3654}}";
-			sepNavSelRange = "{11714, 0}";
-			sepNavVisRect = "{{0, 3223}, {713, 431}}";
+			sepNavSelRange = "{740, 0}";
+			sepNavVisRect = "{{0, 0}, {713, 431}}";
 			sepNavWindowFrame = "{{634, 301}, {758, 560}}";
 		};
 	};
@@ -292,7 +290,7 @@
 			sepNavWindowFrame = "{{15, 613}, {758, 560}}";
 		};
 	};
-	EE40ECEA0AE3706200E37FC1 /* PBXTextBookmark */ = {
+	EE30351C0B719C5200723484 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
 		name = "Info.plist: 51";
@@ -301,42 +299,12 @@
 		rType = 0;
 		vrLen = 0;
 		vrLoc = 0;
-	};
-	EE40ECEB0AE3706200E37FC1 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EE0F690A0ACCCB4100DB4634 /* MainWindow.m */;
-		name = "MainWindow.m: 257";
-		rLen = 0;
-		rLoc = 11714;
-		rType = 0;
-		vrLen = 1314;
-		vrLoc = 10421;
 	};
 	EE7CC2540ACFB4C0009D27DE /* XCBreakpointsBucket */ = {
 		isa = XCBreakpointsBucket;
-		name = "Project Breakpoints";
+		name = "UT2k4 Mod Installer";
 		objects = (
 		);
-	};
-	EE7F7D1C0AE36F700044DE62 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
-		name = "Info.plist: 51";
-		rLen = 0;
-		rLoc = 1417;
-		rType = 0;
-		vrLen = 0;
-		vrLoc = 0;
-	};
-	EE7F7D1D0AE36F700044DE62 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EE0F690A0ACCCB4100DB4634 /* MainWindow.m */;
-		name = "MainWindow.m: 257";
-		rLen = 0;
-		rLoc = 11714;
-		rType = 0;
-		vrLen = 1314;
-		vrLoc = 10421;
 	};
 	EE892F330AD4E0060058F163 /* InstallEngine.h */ = {
 		uiCtxt = {
@@ -350,7 +318,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1232, 3080}}";
 			sepNavSelRange = "{8465, 0}";
-			sepNavVisRect = "{{0, 0}, {713, 431}}";
+			sepNavVisRect = "{{0, 2649}, {713, 431}}";
 			sepNavWindowFrame = "{{380, 285}, {758, 560}}";
 		};
 	};
@@ -366,7 +334,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {824, 1190}}";
 			sepNavSelRange = "{291, 0}";
-			sepNavVisRect = "{{0, 94}, {713, 431}}";
+			sepNavVisRect = "{{0, 759}, {713, 431}}";
 			sepNavWindowFrame = "{{542, 129}, {758, 560}}";
 		};
 	};
@@ -422,5 +390,15 @@
 		uiCtxt = {
 			sepNavWindowFrame = "{{15, 613}, {758, 560}}";
 		};
+	};
+	EED36F260B49CEEA000F576B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
+		name = "Info.plist: 51";
+		rLen = 0;
+		rLoc = 1417;
+		rType = 0;
+		vrLen = 0;
+		vrLoc = 0;
 	};
 }
