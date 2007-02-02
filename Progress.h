@@ -18,4 +18,5 @@
 -(void) windowLoaded: (NSNotification*) notification;
 -(void) installDone: (NSNotification*) notification;
 -(void) start: (NSTimer*) timer;
+-(void)dealloc;
 @end
