@@ -5,9 +5,8 @@
 -(void) windowDidLoad
 {
 	//add ourself as an observer to find when this window is fully loadaed and when a mod is done installing
-	NSNotificationCenter *center=[NSNotificationCenter defaultCenter];
-	[center addObserver: self selector: @selector(windowLoaded:) name: @"_NSWindowDidBecomeVisible" object: [self window]];
-	[center addObserver: self selector: @selector(installDone:) name: @"InstallDone" object: nil];
+	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(windowLoaded:) name: @"_NSWindowDidBecomeVisible" object: [self window]];
+	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(installDone:) name: @"InstallDone" object: nil];
 	
 	//start animate the barber pole and tell the animation to be threaded so it updates durring intense computation
 	[progress_bar startAnimation: self];
@@ -28,17 +27,20 @@
 
 -(void) setUT: (NSString*) path
 {
-	ut_path=path;
+	[ut_path autorelease];
+	ut_path=[path retain];
 }
 
 -(void) setMod: (NSString*) path
 {
-	mod_path=path;
+	[mod_path autorelease]
+	mod_path=[path retain];
 }
 
 -(void) setZU: (NSString*) zu
 {
-	zip_umod=zu;
+	[zip_umod autorelease];
+	zip_umod=[zu retain];
 }
 
 -(void) windowLoaded: (NSNotification*) notification
@@ -80,6 +82,15 @@
 	//dismis the sheet
 	[[self window] orderOut: self];
 	[NSApp endSheet: [self window] returnCode: 1];
+}
+
+-(void)dealloc
+{
+	[[NSNotificationCenter defaultCenter] removeObserver: self];
+	[ut_path release];
+	[mod_path release];
+	[zip_umod release];
+	[supper dealloc]
 }
 
 @end

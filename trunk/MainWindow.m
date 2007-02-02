@@ -6,14 +6,12 @@
 {
 	if(self=[super init])
 	{
-		NSNotificationCenter *center=[NSNotificationCenter defaultCenter];
-		
 		//get notification if one of the text boxes contents changes and set it to textChange:
-		[center addObserver: self selector: @selector(textChange:) name: @"NSControlTextDidChangeNotification" object: mod_path];
-		[center addObserver: self selector: @selector(textChange:) name: @"NSControlTextDidChangeNotification" object: ut_path];
+		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(textChange:) name: @"NSControlTextDidChangeNotification" object: mod_path];
+		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(textChange:) name: @"NSControlTextDidChangeNotification" object: ut_path];
 		
 		//get notification once the app has fully loaded
-		[center addObserver: self selector: @selector(finishLoad:) name: @"NSApplicationDidFinishLaunchingNotification" object: nil];
+		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(finishLoad:) name: @"NSApplicationDidFinishLaunchingNotification" object: nil];
 	}
 	return self;
 }
@@ -51,13 +49,12 @@
 	{
 		NSLog(@"Bugzor!");
 	}
-	if(path!=@"-1")  //If the user clicked Cancel in the open dialog box
+	if([path isEqualToString: @"-1"]==NO)  //If the user clicked Cancel in the open dialog box
 	{
 		//set the mod location text box to the path
 		[mod_path setStringValue: path];
 		//send a notification that the text changed b/c the text box doesn't do it
-		NSNotificationCenter *center=[NSNotificationCenter defaultCenter];
-		[center postNotificationName: @"NSControlTextDidChangeNotification" object: mod_path];
+		[[NSNotificationCenter defaultCenter] postNotificationName: @"NSControlTextDidChangeNotification" object: mod_path];
 	}
 }
 
@@ -75,13 +72,13 @@
 		//set the UT2k4 location text box to the path
 		[ut_path setStringValue: path];
 		//send a notification that the text changed b/c the text box doesn't do it
-		NSNotificationCenter *center=[NSNotificationCenter defaultCenter];
-		[center postNotificationName: @"NSControlTextDidChangeNotification" object: ut_path];
+		[[NSNotificationCenter defaultCenter] postNotificationName: @"NSControlTextDidChangeNotification" object: ut_path];
 	}
 }
 
 - (IBAction)installMod: (id)sender
 {
+	[controller autorelease];
 	controller=[[Progress alloc] initWithWindowNibName: @"ProgressWindow"];
 	
 	//NSAppleScript *script=[[NSAppleScript alloc] initWithSource: @"tell application \"Finder\"\nset label index of alias \"Kendall:\" to 1\nend tell"];
@@ -159,7 +156,6 @@
 			}
 		}
 	}
-	[controller release];
 }
 
 -(void) textChange: (NSNotification*) notification
@@ -188,8 +184,7 @@
 		//set the UT2k4 location text box to the path
 		[ut_path setStringValue: path_temp];
 		//send a notification that the text changed b/c the text box doesn't do it
-		NSNotificationCenter *center=[NSNotificationCenter defaultCenter];
-		[center postNotificationName: @"NSControlTextDidChangeNotification" object: ut_path];
+		[[NSNotificationCenter defaultCenter] postNotificationName: @"NSControlTextDidChangeNotification" object: ut_path];
 	}
 	else if([prefs fileExistsAtPath: [NSHomeDirectory() stringByAppendingString: @"/Library/Application Support/Unreal Tournament 2004/System/ut2k4path.ini"]]==YES)  //The UT2k4 location file exists
 	{
@@ -212,8 +207,7 @@
 		}
 		
 		//send a notification that the text changed b/c the text box doesn't do it
-		NSNotificationCenter *center=[NSNotificationCenter defaultCenter];
-		[center postNotificationName: @"NSControlTextDidChangeNotification" object: ut_path];
+		[[NSNotificationCenter defaultCenter] postNotificationName: @"NSControlTextDidChangeNotification" object: ut_path];
 	}
 	else if([prefs fileExistsAtPath: [NSHomeDirectory() stringByAppendingString: @"/Library/Preferences/Mod_installer_prefs.txt"]]==YES)  //The old prefs exist
 	{
@@ -242,8 +236,7 @@
 		}
 		
 		//send a notification that the text changed b/c the text box doesn't do it
-		NSNotificationCenter *center=[NSNotificationCenter defaultCenter];
-		[center postNotificationName: @"NSControlTextDidChangeNotification" object: ut_path];
+		[[NSNotificationCenter defaultCenter] postNotificationName: @"NSControlTextDidChangeNotification" object: ut_path];
 	}
 }
 
@@ -253,9 +246,15 @@
 	[[zip_umod cellAtRow: 0 column: 0] setState: 0];
 	[[zip_umod cellAtRow: 0 column: 1] setState: 1];
 	//send a notification that the text changed b/c the text box doesn't do it
-	NSNotificationCenter *center=[NSNotificationCenter defaultCenter];
-	[center postNotificationName: @"NSControlTextDidChangeNotification" object: ut_path];
+	[[NSNotificationCenter defaultCenter] postNotificationName: @"NSControlTextDidChangeNotification" object: ut_path];
 	return YES;
+}
+
+-(void)dealloc
+{
+	[[NSNotificationCenter defaultCenter] removeObserver: self];
+	[controller release];
+	[super dealloc];
 }
 
 @end
