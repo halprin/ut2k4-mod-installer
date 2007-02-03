@@ -27,7 +27,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleGetInfoString</key>
-	<string>@PAK software v. 7.0.1</string>
+	<string>@PAK software v. 7.1</string>
 	<key>CFBundleIconFile</key>
 	<string>mod_install</string>
 	<key>CFBundleIdentifier</key>
@@ -41,7 +41,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>7.0.1</string>
+	<string>7.1</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>

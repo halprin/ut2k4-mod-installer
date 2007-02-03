@@ -11,6 +11,8 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		EE0B8E0C0B747179007EB7DB /* InstallLog.nib in Resources */ = {isa = PBXBuildFile; fileRef = EE0B8E0B0B747179007EB7DB /* InstallLog.nib */; };
+		EE0B8E2C0B7478D2007EB7DB /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0B8E2B0B7478D2007EB7DB /* Logger.m */; };
 		EE0F690B0ACCCB4100DB4634 /* MainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0F690A0ACCCB4100DB4634 /* MainWindow.m */; };
 		EE15BC2C0ADDE1ED00B3A1CA /* umod_icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = EE15BC2B0ADDE1ED00B3A1CA /* umod_icon.icns */; };
 		EE23639F0ACF06BC00957E16 /* unzip in Resources */ = {isa = PBXBuildFile; fileRef = EE23639E0ACF06BC00957E16 /* unzip */; };
@@ -31,6 +33,9 @@
 		32CA4F630368D1EE00C91783 /* UT2k4 Mod Installer_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UT2k4 Mod Installer_Prefix.pch"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* UT2k4 Mod Installer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UT2k4 Mod Installer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE0B8E0B0B747179007EB7DB /* InstallLog.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = InstallLog.nib; sourceTree = "<group>"; };
+		EE0B8E2A0B7478D2007EB7DB /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
+		EE0B8E2B0B7478D2007EB7DB /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Logger.m; sourceTree = "<group>"; };
 		EE0F69090ACCCB4100DB4634 /* MainWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MainWindow.h; sourceTree = "<group>"; };
 		EE0F690A0ACCCB4100DB4634 /* MainWindow.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MainWindow.m; sourceTree = "<group>"; };
 		EE15BC2B0ADDE1ED00B3A1CA /* umod_icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = umod_icon.icns; sourceTree = "<group>"; };
@@ -62,6 +67,8 @@
 				EE8992A10AD0B27900AC5B87 /* Progress.m */,
 				EE0F69090ACCCB4100DB4634 /* MainWindow.h */,
 				EE0F690A0ACCCB4100DB4634 /* MainWindow.m */,
+				EE0B8E2A0B7478D2007EB7DB /* Logger.h */,
+				EE0B8E2B0B7478D2007EB7DB /* Logger.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -125,6 +132,7 @@
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+				EE0B8E0B0B747179007EB7DB /* InstallLog.nib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -186,6 +194,7 @@
 				EE89920B0AD0962400AC5B87 /* ProgressWindow.nib in Resources */,
 				EEA6E24D0AD20AC100D5B54B /* Credits.html in Resources */,
 				EE15BC2C0ADDE1ED00B3A1CA /* umod_icon.icns in Resources */,
+				EE0B8E0C0B747179007EB7DB /* InstallLog.nib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +208,7 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				EE0F690B0ACCCB4100DB4634 /* MainWindow.m in Sources */,
 				EE8992A20AD0B27900AC5B87 /* Progress.m in Sources */,
+				EE0B8E2C0B7478D2007EB7DB /* Logger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

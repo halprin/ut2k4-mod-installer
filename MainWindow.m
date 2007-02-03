@@ -1,3 +1,11 @@
+//
+//  Progress.m
+//  UT2k4 Mod Installer
+//
+//  Created by Peter Kendall
+//  Copyright @PAK software 2007. All rights reserved.
+//
+
 #import "MainWindow.h"
 
 @implementation MainWindow
