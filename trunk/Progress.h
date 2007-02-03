@@ -9,11 +9,12 @@
 	IBOutlet NSTextView *log;
 	NSString *ut_path;
 	NSString *mod_path;
+	NSString *old_mod;
 	NSString *zip_umod;
-	BOOL inst_done;
 	NSTask *task;
 	NSMutableArray *elements;
 	int install_index;
+	BOOL moved;
 }
 -(void) windowDidLoad;
 -(void) setUT: (NSString*) path;

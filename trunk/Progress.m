@@ -12,8 +12,6 @@
 	[progress_bar startAnimation: self];
 	[progress_bar setUsesThreadedAnimation: YES];
 	
-	inst_done=NO;
-	
 	//set the initial status info
 	if([zip_umod isEqualToString: @"zip"])  //it is a zip mod
 	{
@@ -51,10 +49,7 @@
 
 -(void) installDone: (NSNotification*) notification
 {
-	inst_done=YES;
 	NSTimer *ender=[NSTimer scheduledTimerWithTimeInterval: 3.0 target: self selector: @selector(end:) userInfo: nil repeats: NO];
-	//NSRunLoop *theRL=[NSRunLoop currentRunLoop];
-	//while([theRL runMode: NSDefaultRunLoopMode beforeDate: [NSDate distantFuture]]);
 }
 
 -(void) start: (NSTimer*) timer
@@ -66,6 +61,9 @@
 		zip_path=[zip_path stringByAppendingPathComponent: @"Contents"];
 		zip_path=[zip_path stringByAppendingPathComponent: @"Resources"];
 		zip_path=[zip_path stringByAppendingPathComponent: @"unzip"];
+		
+		//even though it isn't used, set it to no anyway
+		moved=NO;
 		
 		//set up for finding out the files in the ZIP
 		[task autorelease];
@@ -91,7 +89,7 @@
 		
 		//time for the actual unstuffing
 		[task autorelease];
-		task=[[NSTask alloc] init];
+		task=[[[NSTask alloc] init] retain];
 		[task setStandardOutput: [NSPipe pipe]];
 		[task setStandardError: [task standardOutput]];
 		[task setLaunchPath: zip_path];
@@ -105,7 +103,113 @@
 	}
 	else if([zip_umod isEqualToString: @"umod"])  //it is a umod
 	{
+		//get the path to the ucc-bin program
+		NSString *ucc_path=[ut_path stringByAppendingPathComponent: @"System"];
+		ucc_path=[ucc_path stringByAppendingPathComponent: @"ucc-bin"];
 		
+		//If there spaces to the UMOD, we need to rectify that by moving it to the home folder and then back afterward
+		NSFileManager *manager=[NSFileManager defaultManager];
+		moved=NO;
+		[old_mod autorelease];
+		old_mod=[NSString string];
+		NSArray *spaces=[mod_path componentsSeparatedByString: @" "];
+		if([spaces count]>1)  //we have spaces!
+		{
+			[manager movePath: mod_path toPath: [NSHomeDirectory() stringByAppendingPathComponent: [mod_path lastPathComponent]] handler: self];
+			[old_mod autorelease];
+			old_mod=[[NSString stringWithString: mod_path] retain];
+			[mod_path autorelease];
+			mod_path=[NSHomeDirectory() stringByAppendingPathComponent: [mod_path lastPathComponent]];
+			moved=YES;
+		}
+		
+		//set up for finding out the files in the UMOD
+		[task autorelease];
+		task=[[NSTask alloc] init];
+		[task setLaunchPath: ucc_path];
+		[task setArguments: [NSArray arrayWithObjects: @"umodunpack", @"-l", mod_path, @"-nohomedir", nil]];
+		[task launch];
+		[task waitUntilExit];
+		NSString *contents=[NSString stringWithContentsOfFile: [ut_path stringByAppendingString: @"/System/ucc.log"]];
+		
+		//parse the string and set the progress bar to the size
+		[elements autorelease];
+		elements=[[NSMutableArray arrayWithArray: [contents componentsSeparatedByString: @"\n"]] retain];
+		int lcv=0;
+		for(lcv=0; lcv<12; lcv++)
+		{
+			[elements removeLastObject];
+		}
+		for(lcv=0; lcv<12; lcv++)
+		{
+			[elements removeObjectAtIndex: 0];
+		}
+		for(lcv=0; lcv<[elements count]; lcv++)
+		{
+			if([[[elements objectAtIndex: lcv] substringToIndex: 6] isEqualToString: @"Log: ."]==YES)  //it isn't installed in System
+			{
+				[elements replaceObjectAtIndex: lcv withObject: [[elements objectAtIndex: lcv] substringFromIndex: 8]];
+			}
+			else
+			{
+				[elements replaceObjectAtIndex: lcv withObject: [@"System/" stringByAppendingString: [[elements objectAtIndex: lcv] substringFromIndex: 5]]];
+			}
+		}
+		
+		[progress_bar setIndeterminate: NO];
+		[progress_bar setMaxValue: 2*((double)[elements count])+5];  //2 times because once is determining changed files and the other for actuall installation and +5 for extra lines in the installation log
+		
+		//if a folder doesn't exist, make it.  if a file exists, delete it
+		[status_text setStringValue: @"Determining changed files:"];
+		NSCharacterSet *set=[NSCharacterSet characterSetWithCharactersInString: @"/"];
+		for(lcv=0; lcv<[elements count]; lcv++)
+		{
+			NSScanner *sc=[NSScanner scannerWithString: [elements objectAtIndex: lcv]];
+			NSString *item=[NSString string];
+			NSString *traverse=[NSString string];
+			BOOL work=YES;
+			while(work==YES && [sc isAtEnd]!=YES)  //keep doing this if work keeps returning meaningfull stuff and it isn't at the end
+			{
+				//[item autorelease];
+				work=[sc scanUpToCharactersFromSet: set intoString: &item];
+				[sc scanString: @"/" intoString: nil];
+				traverse=[traverse stringByAppendingPathComponent: item];
+				//check if the item is a folder or item
+				BOOL isDir;
+				BOOL exist=[manager fileExistsAtPath: [[ut_path stringByAppendingString: @"/"] stringByAppendingString: traverse] isDirectory: &isDir];
+				if(exist==YES)  //the file does exit and tests if it is a directory or not
+				{
+					if(isDir==NO)  //it is a file
+					{
+						//need to delete the file so the umodunpack doesn't through a fit
+						[manager removeFileAtPath: [[ut_path stringByAppendingString: @"/"] stringByAppendingString: traverse] handler: self];
+					}
+				}
+				else
+				{
+					if([sc isAtEnd]==NO)  //isDir isn't edited if it doesn't even exist so we test if the Scanner is at the end (and if it is, that means it is a file, not a directory)
+					{
+						//need to create the directory so the umodunpack doesn't through a fit
+						[manager createDirectoryAtPath: [[ut_path stringByAppendingString: @"/"] stringByAppendingString: traverse] attributes: nil];
+					}
+				}
+			}
+			[progress_bar incrementBy: 1.0];
+		}
+		
+		//now actually do the umodunpack
+		[status_text setStringValue: @"Installing:"];
+		[task autorelease];
+		task=[[[NSTask alloc] init] retain];
+		[task setStandardOutput: [NSPipe pipe]];
+		[task setStandardError: [task standardOutput]];
+		[task setLaunchPath: ucc_path];
+		[task setArguments: [NSArray arrayWithObjects: @"umodunpack", @"-x", mod_path, @"-nohomedir", nil]];
+		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(reader:) name: @"NSFileHandleReadCompletionNotification" object: [[task standardOutput] fileHandleForReading]];
+		[[[task standardOutput] fileHandleForReading] readInBackgroundAndNotify];
+		install_index=0;
+		//execute umodunpack -x *mod_path* -nohomedir
+		[task launch];
 	}
 }
 
@@ -121,8 +225,22 @@
 		int lcv;
 		for(lcv=0; lcv<num_items; lcv++)
 		{
-			[[[log textStorage] mutableString] appendString: [@"Installing:  " stringByAppendingString: [[[[elements objectAtIndex: install_index] componentsSeparatedByString: @":"] objectAtIndex: 1] substringFromIndex: 3]]];
-			[[[log textStorage] mutableString] appendString: @"\n"];
+			if([zip_umod isEqualToString: @"zip"])
+			{
+				if(install_index<[elements count])
+				{
+					[[[log textStorage] mutableString] appendString: [@"Installing:  " stringByAppendingString: [[[[elements objectAtIndex: install_index] componentsSeparatedByString: @":"] objectAtIndex: 1] substringFromIndex: 3]]];
+					[[[log textStorage] mutableString] appendString: @"\n"];
+				}
+			}
+			else
+			{
+				if(install_index<[elements count])
+				{
+					[[[log textStorage] mutableString] appendString: [@"Installing:  " stringByAppendingString: [elements objectAtIndex: install_index]]];
+					[[[log textStorage] mutableString] appendString: @"\n"];
+				}
+			}
 			install_index++;
 		}
 		
@@ -143,8 +261,22 @@
 			int lcv;
 			for(lcv=0; lcv<num_items; lcv++)
 			{
-				[[[log textStorage] mutableString] appendString: [@"Installing:  " stringByAppendingString: [[[[elements objectAtIndex: install_index] componentsSeparatedByString: @":"] objectAtIndex: 1] substringFromIndex: 3]]];
-				[[[log textStorage] mutableString] appendString: @"\n"];
+				if([zip_umod isEqualToString: @"zip"])
+				{
+					if(install_index<[elements count])
+					{
+						[[[log textStorage] mutableString] appendString: [@"Installing:  " stringByAppendingString: [[[[elements objectAtIndex: install_index] componentsSeparatedByString: @":"] objectAtIndex: 1] substringFromIndex: 3]]];
+						[[[log textStorage] mutableString] appendString: @"\n"];
+					}
+				}
+				else
+				{
+					if(install_index<[elements count])
+					{
+						[[[log textStorage] mutableString] appendString: [@"Installing:  " stringByAppendingString: [elements objectAtIndex: install_index]]];
+						[[[log textStorage] mutableString] appendString: @"\n"];
+					}
+				}
 				install_index++;
 			}
 			
@@ -166,6 +298,11 @@
 		[progress_bar setDoubleValue: [progress_bar maxValue]];
 		[status_text setStringValue: @"Cleaning up..."];
 		
+		if(moved==YES)  //we need to move the mod file back to the original place
+		{
+			[[NSFileManager defaultManager] movePath: mod_path toPath: old_mod handler: self];
+		}
+		
 		//post a notification that the install is done
 		[[NSNotificationCenter defaultCenter] postNotificationName: @"InstallDone" object: self];
 	}
@@ -185,8 +322,10 @@
 	[ut_path release];
 	[mod_path release];
 	[zip_umod release];
+	NSLog(@"%i", [task retainCount]);
 	[task release];
 	[elements release];
+	[old_mod release];
 	[super dealloc];
 }
 
