@@ -1,0 +1,13 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {uninstall = id; view = id; }; 
+            CLASS = Logger; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {table = NSTableView; uninstallButton = NSButton; viewButton = NSButton; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}
