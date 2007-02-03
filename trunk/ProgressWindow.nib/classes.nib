@@ -4,7 +4,11 @@
         {
             CLASS = Progress; 
             LANGUAGE = ObjC; 
-            OUTLETS = {"progress_bar" = NSProgressIndicator; "status_text" = NSTextField; }; 
+            OUTLETS = {
+                log = NSTextView; 
+                "progress_bar" = NSProgressIndicator; 
+                "status_text" = NSTextField; 
+            }; 
             SUPERCLASS = NSWindowController; 
         }
     ); 
