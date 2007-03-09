@@ -2,7 +2,7 @@
     IBClasses = (
         {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
         {
-            ACTIONS = {findMod = id; findUT = id; installMod = id; }; 
+            ACTIONS = {displayLogs = id; findMod = id; findUT = id; installMod = id; }; 
             CLASS = MainWindow; 
             LANGUAGE = ObjC; 
             OUTLETS = {

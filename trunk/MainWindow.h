@@ -2,6 +2,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "Progress.h"
+#import "Logger.h"
 
 @interface MainWindow : NSObject
 {
@@ -11,11 +12,13 @@
     IBOutlet NSWindow *window;
     IBOutlet NSMatrix *zip_umod;
 	Progress *controller;
+	Logger *loggerage;
 }
 -(MainWindow*) init;
 - (IBAction)findMod:(id)sender;
 - (IBAction)findUT:(id)sender;
 - (IBAction)installMod:(id)sender;
+- (IBAction)displayLogs:(id)sender;
 -(void) textChange: (NSNotification*) notification;
 -(void) finishLoad: (NSNotification*) notification;
 -(BOOL) application: (NSApplication*) theApp openFile: (NSString*) filepath;

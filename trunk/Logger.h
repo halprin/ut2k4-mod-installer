@@ -2,7 +2,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface Logger : NSObject
+@interface Logger : NSWindowController
 {
     IBOutlet NSTableView *table;
     IBOutlet NSButton *uninstallButton;

@@ -2,10 +2,8 @@
     IBClasses = (
         {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
         {
-            ACTIONS = {uninstall = id; view = id; }; 
-            CLASS = Logger; 
+            CLASS = PreferencesManager; 
             LANGUAGE = ObjC; 
-            OUTLETS = {table = NSTableView; uninstallButton = NSButton; viewButton = NSButton; }; 
             SUPERCLASS = NSWindowController; 
         }
     ); 
