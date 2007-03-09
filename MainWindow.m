@@ -166,6 +166,13 @@
 	}
 }
 
+- (IBAction)displayLogs:(id)sender
+{
+	[loggerage autorelease];
+	loggerage=[[Logger alloc] initWithWindowNibName: @"InstallLog"];
+	[loggerage showWindow: self];
+}
+
 -(void) textChange: (NSNotification*) notification
 {
 	if([[ut_path stringValue] length]!=0 && [[mod_path stringValue] length]!=0)  //both text boxes have text

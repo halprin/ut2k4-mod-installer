@@ -16,6 +16,7 @@
 		EE0F690B0ACCCB4100DB4634 /* MainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0F690A0ACCCB4100DB4634 /* MainWindow.m */; };
 		EE15BC2C0ADDE1ED00B3A1CA /* umod_icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = EE15BC2B0ADDE1ED00B3A1CA /* umod_icon.icns */; };
 		EE23639F0ACF06BC00957E16 /* unzip in Resources */ = {isa = PBXBuildFile; fileRef = EE23639E0ACF06BC00957E16 /* unzip */; };
+		EE7766FC0BA10B4D002E2D24 /* Preferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = EE7766FB0BA10B4D002E2D24 /* Preferences.nib */; };
 		EE89920B0AD0962400AC5B87 /* ProgressWindow.nib in Resources */ = {isa = PBXBuildFile; fileRef = EE89920A0AD0962400AC5B87 /* ProgressWindow.nib */; };
 		EE8992A20AD0B27900AC5B87 /* Progress.m in Sources */ = {isa = PBXBuildFile; fileRef = EE8992A10AD0B27900AC5B87 /* Progress.m */; };
 		EEA6E24D0AD20AC100D5B54B /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = EEA6E24C0AD20AC100D5B54B /* Credits.html */; };
@@ -41,6 +42,7 @@
 		EE15BC2B0ADDE1ED00B3A1CA /* umod_icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = umod_icon.icns; sourceTree = "<group>"; };
 		EE2363800ACF05E200957E16 /* at_sign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = at_sign.png; sourceTree = "<group>"; };
 		EE23639E0ACF06BC00957E16 /* unzip */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = unzip; sourceTree = "<group>"; };
+		EE7766FB0BA10B4D002E2D24 /* Preferences.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = Preferences.nib; sourceTree = "<group>"; };
 		EE89920A0AD0962400AC5B87 /* ProgressWindow.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = ProgressWindow.nib; sourceTree = "<group>"; };
 		EE8992A00AD0B27900AC5B87 /* Progress.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Progress.h; sourceTree = "<group>"; };
 		EE8992A10AD0B27900AC5B87 /* Progress.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Progress.m; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
 				EE0B8E0B0B747179007EB7DB /* InstallLog.nib */,
+				EE7766FB0BA10B4D002E2D24 /* Preferences.nib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				EEA6E24D0AD20AC100D5B54B /* Credits.html in Resources */,
 				EE15BC2C0ADDE1ED00B3A1CA /* umod_icon.icns in Resources */,
 				EE0B8E0C0B747179007EB7DB /* InstallLog.nib in Resources */,
+				EE7766FC0BA10B4D002E2D24 /* Preferences.nib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
