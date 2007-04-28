@@ -15,11 +15,13 @@
 	NSMutableArray *elements;
 	int install_index;
 	BOOL moved;
+	NSString *colorLabel;
 }
 -(void) windowDidLoad;
 -(void) setUT: (NSString*) path;
 -(void) setMod: (NSString*) path;
 -(void) setZU: (NSString*) zu;
+-(void) setColorLabel: (NSString*) cl;
 -(void) windowLoaded: (NSNotification*) notification;
 -(void) installDone: (NSNotification*) notification;
 -(void) start: (NSTimer*) timer;

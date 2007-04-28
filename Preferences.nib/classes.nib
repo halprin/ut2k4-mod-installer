@@ -2,8 +2,10 @@
     IBClasses = (
         {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
         {
+            ACTIONS = {cancel = id; enableColor = id; ok = id; }; 
             CLASS = PreferencesManager; 
             LANGUAGE = ObjC; 
+            OUTLETS = {check = NSButton; color = NSPopUpButton; }; 
             SUPERCLASS = NSWindowController; 
         }
     ); 
