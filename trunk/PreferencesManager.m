@@ -12,13 +12,15 @@
 
 - (IBAction)cancel:(id)sender
 {
+	//destroy it without setting anything
 	[[self window] close];
 }
 
 - (IBAction)ok:(id)sender
 {
-	if([color isEnabled]==YES)
+	if([color isEnabled]==YES)  //is the checkbox checked?
 	{
+		//test what the item is chose in the drop down menu
 		if([[color titleOfSelectedItem] isEqualToString: @"Red"])
 		{
 			[*labelColor autorelease];
@@ -55,22 +57,23 @@
 			*labelColor=[[NSString stringWithString: @"7"] retain];
 		}
 	}
-	else
+	else  //it is not enabled and set it to 0 or nothing
 	{
 		[*labelColor autorelease];
 		*labelColor=[[NSString stringWithString: @"0"] retain];
 	}
-	[[self window] close];
 	
+	//close the window now
+	[[self window] close];
 }
 
 - (IBAction)enableColor:(id)sender
 {
-	if([sender state]==NSOnState)
+	if([sender state]==NSOnState)  //it was just checked
 	{
 		[color setEnabled: YES];
 	}
-	else
+	else  //it was just unchecked
 	{
 		[color setEnabled: NO];
 	}
@@ -78,10 +81,13 @@
 
 -(void)windowDidLoad
 {
-	if([*labelColor isEqualToString: @"0"]==NO)
+	if([*labelColor isEqualToString: @"0"]==NO)  //the previous setting was set to a color
 	{
+		//put the checbox into a checked state and enable the drop down menu
 		[check setState: NSOnState];
 		[color setEnabled: YES];
+		
+		//set the drop down menu to the appropriate menu selection
 		if([*labelColor isEqualToString: @"2"])
 		{
 			[color selectItemAtIndex: 0];

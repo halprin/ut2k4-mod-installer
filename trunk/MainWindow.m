@@ -163,6 +163,7 @@
 				}
 				NSMutableDictionary *root=[NSMutableDictionary dictionary];
 				[root setValue: [ut_path stringValue] forKey: @"UTpath"];
+				[root setValue: colorLabel forKey: @"ColorLabel"];
 				[NSKeyedArchiver archiveRootObject: root toFile: [@"~/Library/Preferences/com.atPAK.04ModInstallerPrefs.plist" stringByExpandingTildeInPath]];
 			}
 		}
@@ -203,9 +204,15 @@
 	//add in some code that checks if the .plist file exists first before any of these bottom 2
 	if([prefs fileExistsAtPath: [NSHomeDirectory() stringByAppendingString: @"/Library/Preferences/com.atPAK.04ModInstallerPrefs.plist"]]==YES)  //The new prefs exist
 	{
-		//get the dictionary and get the single key in there
+		//get the dictionary and get the two keys in there
 		NSDictionary *root=[NSKeyedUnarchiver unarchiveObjectWithFile: [@"~/Library/Preferences/com.atPAK.04ModInstallerPrefs.plist" stringByExpandingTildeInPath]];
 		NSString *path_temp=[root valueForKey: @"UTpath"];
+		NSString *colorage=[root valueForKey: @"ColorLabel"];
+		if(colorage!=nil)  //need to check for this because it is possible that this key might not exist
+		{
+			[colorLabel autorelease];
+			colorLabel=[colorage retain];
+		}
 		//set the UT2k4 location text box to the path
 		[ut_path setStringValue: path_temp];
 		//send a notification that the text changed b/c the text box doesn't do it
