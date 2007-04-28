@@ -289,6 +289,8 @@
 		//scroll to the bottom of the log and up the progress bar
 		[log scrollRangeToVisible: NSMakeRange([[log string] length], [[log string] length])];
 		[progress_bar incrementBy: ((double)num_items)];
+		
+		[contents release];
 	}
 	else
 	{
