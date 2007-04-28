@@ -48,6 +48,12 @@
 	zip_umod=[zu retain];
 }
 
+-(void) setColorLabel: (NSString*) cl
+{
+	[colorLabel autorelease];
+	colorLabel=[cl retain];
+}
+
 -(void) windowLoaded: (NSNotification*) notification
 {
 	NSTimer *starter=[NSTimer scheduledTimerWithTimeInterval: 2.0 target: self selector: @selector(start:) userInfo: nil repeats: NO];
@@ -60,7 +66,7 @@
 }
 
 -(void) start: (NSTimer*) timer
-{	
+{
 	if([zip_umod isEqualToString: @"zip"])  //it is a zip mod
 	{
 		//get the path to the unzip program
@@ -226,7 +232,6 @@
 	if([data length])  //does the data have anything in it?
     {
 		NSString *contents=[[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
-		//[[[log textStorage] mutableString] appendString: contents];
 		int num_items=[[contents componentsSeparatedByString: @"\n"] count]-1;
 		//for how ever many items were just read in, display that many from the array
 		int lcv;
@@ -236,6 +241,21 @@
 			{
 				if(install_index<[elements count])
 				{
+					if([colorLabel isEqualToString: @"0"]==NO)  //if we have a label wanted, lets add it!
+					{
+						//crazy go nuts CoreFoundation code thanks to CocoaDev that gets me the exact HFS file path
+						CFURLRef posixURL=CFURLCreateWithFileSystemPath(NULL, (CFStringRef)[[ut_path stringByAppendingString: @"/"] stringByAppendingString: [[[[elements objectAtIndex: install_index] componentsSeparatedByString: @":"] objectAtIndex: 1] substringFromIndex: 3]], kCFURLPOSIXPathStyle, false);
+						CFStringRef asPath=CFURLCopyFileSystemPath(posixURL, kCFURLHFSPathStyle);
+						CFRelease(posixURL);
+						
+						//make the command and execute AppleScript
+						NSString *asCommand=[NSString stringWithFormat: @"tell application \"Finder\"\nset label index of alias \"%@\" to %@\nend tell", asPath, colorLabel];
+						CFRelease(asPath);
+						NSAppleScript *script=[[NSAppleScript alloc] initWithSource: asCommand];
+						[script executeAndReturnError: nil];
+						[script autorelease];
+					}
+					
 					[[[log textStorage] mutableString] appendString: [@"Installing:  " stringByAppendingString: [[[[elements objectAtIndex: install_index] componentsSeparatedByString: @":"] objectAtIndex: 1] substringFromIndex: 3]]];
 					[[[log textStorage] mutableString] appendString: @"\n"];
 				}
@@ -244,6 +264,21 @@
 			{
 				if(install_index<[elements count])
 				{
+					if([colorLabel isEqualToString: @"0"]==NO)  //if we have a label wanted, lets add it!
+					{
+						//crazy go nuts CoreFoundation code thanks to CocoaDev that gets me the exact HFS file path
+						CFURLRef posixURL=CFURLCreateWithFileSystemPath(NULL, (CFStringRef)[[ut_path stringByAppendingString: @"/"] stringByAppendingString: [elements objectAtIndex: install_index]], kCFURLPOSIXPathStyle, false);
+						CFStringRef asPath=CFURLCopyFileSystemPath(posixURL, kCFURLHFSPathStyle);
+						CFRelease(posixURL);
+						
+						//make the command and execute AppleScript
+						NSString *asCommand=[NSString stringWithFormat: @"tell application \"Finder\"\nset label index of alias \"%@\" to %@\nend tell", asPath, colorLabel];
+						CFRelease(asPath);
+						NSAppleScript *script=[[NSAppleScript alloc] initWithSource: asCommand];
+						[script executeAndReturnError: nil];
+						[script autorelease];
+					}
+					
 					[[[log textStorage] mutableString] appendString: [@"Installing:  " stringByAppendingString: [elements objectAtIndex: install_index]]];
 					[[[log textStorage] mutableString] appendString: @"\n"];
 				}
@@ -262,7 +297,6 @@
 		while((data=[[[task standardOutput] fileHandleForReading] availableData]) && [data length])  //does the data have anything in it?
 		{
 			NSString *contents=[[[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding] autorelease];
-			//[[[log textStorage] mutableString] appendString: contents];
 			int num_items=[[contents componentsSeparatedByString: @"\n"] count]-1;
 			//for how ever many items were just read in, display that many from the array
 			int lcv;
@@ -329,7 +363,6 @@
 	[ut_path release];
 	[mod_path release];
 	[zip_umod release];
-	NSLog(@"%i", [task retainCount]);
 	[task release];
 	[elements release];
 	[old_mod release];

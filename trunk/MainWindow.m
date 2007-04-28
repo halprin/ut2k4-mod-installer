@@ -20,6 +20,8 @@
 		
 		//get notification once the app has fully loaded
 		[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(finishLoad:) name: @"NSApplicationDidFinishLaunchingNotification" object: nil];
+		
+		colorLabel=[[NSString stringWithString: @"0"] retain];
 	}
 	return self;
 }
@@ -28,7 +30,7 @@
 {
 	NSButtonCell *zip=[zip_umod cellAtRow: 0 column: 0];
 	NSButtonCell *umod=[zip_umod cellAtRow: 0 column: 1];
-	NSString *path=@"-1";
+	NSString *path=[NSString stringWithString: @"-1"];
 	if([zip state]==1)  //ZIP is selected in the Radio control
 	{
 		//setup and display the open dialog box
@@ -68,7 +70,7 @@
 
 - (IBAction)findUT:(id)sender
 {
-	NSString *path=@"-1";
+	NSString *path=[NSString stringWithString: @"-1"];
 	//setup and display the open dialog box
 	NSArray *fileTypes=[NSArray arrayWithObject: @"app"];
 	NSOpenPanel *oPanel=[NSOpenPanel openPanel];
@@ -144,9 +146,10 @@
 			//display the sheet!
 			if(nope!=YES)  //UMOD file doesn't have spaces
 			{
-				//pass the UT2k4 and mod path to the new progress window
+				//pass the UT2k4 and mod path to the new progress window and color to label new files
 				[controller setUT: [ut_path stringValue]];
 				[controller setMod: [mod_path stringValue]];
+				[controller setColorLabel: colorLabel];
 				[NSApp beginSheet: [controller window] modalForWindow: window modalDelegate: self didEndSelector: nil contextInfo: nil];
 			}
 			
@@ -171,6 +174,13 @@
 	[loggerage autorelease];
 	loggerage=[[Logger alloc] initWithWindowNibName: @"InstallLog"];
 	[loggerage showWindow: self];
+}
+
+- (IBAction)displayPrefs:(id)sender
+{
+	[preffer autorelease];
+	preffer=[[PreferencesManager alloc] initWithWindowNibName: @"Preferences" withPrefVar: &colorLabel];
+	[preffer showWindow: self];
 }
 
 -(void) textChange: (NSNotification*) notification
@@ -269,6 +279,9 @@
 {
 	[[NSNotificationCenter defaultCenter] removeObserver: self];
 	[controller release];
+	[loggerage release];
+	[preffer release];
+	[colorLabel release];
 	[super dealloc];
 }
 
