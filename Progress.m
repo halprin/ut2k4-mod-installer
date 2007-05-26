@@ -57,6 +57,8 @@
 -(void) windowLoaded: (NSNotification*) notification
 {
 	NSTimer *starter=[NSTimer scheduledTimerWithTimeInterval: 2.0 target: self selector: @selector(start:) userInfo: nil repeats: NO];
+	//get the install date and time for when we write the log at the end
+	installTime=[[[NSCalendarDate calendarDate] descriptionWithCalendarFormat: @"%m/%d/%Y %I:%M:%S %p"] retain];
 }
 
 
@@ -175,7 +177,8 @@
 		//if a folder doesn't exist, make it.  if a file exists, delete it
 		[status_text setStringValue: @"Determining changed files:"];
 		NSCharacterSet *set=[NSCharacterSet characterSetWithCharactersInString: @"/"];
-		for(lcv=0; lcv<[elements count]; lcv++)
+		int elem_count=[elements count];
+		for(lcv=0; lcv<elem_count; lcv++)
 		{
 			NSScanner *sc=[NSScanner scannerWithString: [elements objectAtIndex: lcv]];
 			NSString *item=[NSString string];
@@ -183,7 +186,6 @@
 			BOOL work=YES;
 			while(work==YES && [sc isAtEnd]!=YES)  //keep doing this if work keeps returning meaningfull stuff and it isn't at the end
 			{
-				//[item autorelease];
 				work=[sc scanUpToCharactersFromSet: set intoString: &item];
 				[sc scanString: @"/" intoString: nil];
 				traverse=[traverse stringByAppendingPathComponent: item];
@@ -197,6 +199,13 @@
 						//need to delete the file so the umodunpack doesn't through a fit
 						[manager removeFileAtPath: [[ut_path stringByAppendingString: @"/"] stringByAppendingString: traverse] handler: self];
 					}
+					else if([elements containsObject: [traverse stringByAppendingString: @"/"]]==NO)  //it is a directory and isn't already in the elements array
+					{
+						//need to add the directory to the elements so we can be the same as a zip wich lists the directories
+						[elements insertObject: [traverse stringByAppendingString: @"/"] atIndex: 0];
+						lcv++;
+						elem_count++;
+					}
 				}
 				else
 				{
@@ -204,6 +213,11 @@
 					{
 						//need to create the directory so the umodunpack doesn't through a fit
 						[manager createDirectoryAtPath: [[ut_path stringByAppendingString: @"/"] stringByAppendingString: traverse] attributes: nil];
+						
+						//need to add the directory to the elements so we can be the same as a zip wich lists the directories
+						[elements insertObject: [traverse stringByAppendingString: @"/"] atIndex: 0];
+						lcv++;
+						elem_count++;
 					}
 				}
 			}
@@ -241,21 +255,6 @@
 			{
 				if(install_index<[elements count])
 				{
-					if([colorLabel isEqualToString: @"0"]==NO)  //if we have a label wanted, lets add it!
-					{
-						//crazy go nuts CoreFoundation code thanks to CocoaDev that gets me the exact HFS file path
-						CFURLRef posixURL=CFURLCreateWithFileSystemPath(NULL, (CFStringRef)[[ut_path stringByAppendingString: @"/"] stringByAppendingString: [[[[elements objectAtIndex: install_index] componentsSeparatedByString: @":"] objectAtIndex: 1] substringFromIndex: 3]], kCFURLPOSIXPathStyle, false);
-						CFStringRef asPath=CFURLCopyFileSystemPath(posixURL, kCFURLHFSPathStyle);
-						CFRelease(posixURL);
-						
-						//make the command and execute AppleScript
-						NSString *asCommand=[NSString stringWithFormat: @"tell application \"Finder\"\nset label index of alias \"%@\" to %@\nend tell", asPath, colorLabel];
-						CFRelease(asPath);
-						NSAppleScript *script=[[NSAppleScript alloc] initWithSource: asCommand];
-						[script executeAndReturnError: nil];
-						[script autorelease];
-					}
-					
 					[[[log textStorage] mutableString] appendString: [@"Installing:  " stringByAppendingString: [[[[elements objectAtIndex: install_index] componentsSeparatedByString: @":"] objectAtIndex: 1] substringFromIndex: 3]]];
 					[[[log textStorage] mutableString] appendString: @"\n"];
 				}
@@ -264,21 +263,6 @@
 			{
 				if(install_index<[elements count])
 				{
-					if([colorLabel isEqualToString: @"0"]==NO)  //if we have a label wanted, lets add it!
-					{
-						//crazy go nuts CoreFoundation code thanks to CocoaDev that gets me the exact HFS file path
-						CFURLRef posixURL=CFURLCreateWithFileSystemPath(NULL, (CFStringRef)[[ut_path stringByAppendingString: @"/"] stringByAppendingString: [elements objectAtIndex: install_index]], kCFURLPOSIXPathStyle, false);
-						CFStringRef asPath=CFURLCopyFileSystemPath(posixURL, kCFURLHFSPathStyle);
-						CFRelease(posixURL);
-						
-						//make the command and execute AppleScript
-						NSString *asCommand=[NSString stringWithFormat: @"tell application \"Finder\"\nset label index of alias \"%@\" to %@\nend tell", asPath, colorLabel];
-						CFRelease(asPath);
-						NSAppleScript *script=[[NSAppleScript alloc] initWithSource: asCommand];
-						[script executeAndReturnError: nil];
-						[script autorelease];
-					}
-					
 					[[[log textStorage] mutableString] appendString: [@"Installing:  " stringByAppendingString: [elements objectAtIndex: install_index]]];
 					[[[log textStorage] mutableString] appendString: @"\n"];
 				}
@@ -329,22 +313,112 @@
 		}
 		//take us off the notification
 		[[NSNotificationCenter defaultCenter] removeObserver: self name: @"NSFileHandleReadCompletionNotification" object: nil];
-		
+				
 		//display the rest of the files in the array if there is any left
-		for(; install_index<[elements count]; install_index++)
+		if([zip_umod isEqualToString: @"zip"])
 		{
-			[[[log textStorage] mutableString] appendString: [@"Installing:  " stringByAppendingString: [[[[elements objectAtIndex: install_index] componentsSeparatedByString: @":"] objectAtIndex: 1] substringFromIndex: 3]]];
-			[[[log textStorage] mutableString] appendString: @"\n"];
+			for(; install_index<[elements count]; install_index++)
+			{
+				[[[log textStorage] mutableString] appendString: [@"Installing:  " stringByAppendingString: [[[[elements objectAtIndex: install_index] componentsSeparatedByString: @":"] objectAtIndex: 1] substringFromIndex: 3]]];
+				[[[log textStorage] mutableString] appendString: @"\n"];
+			}
+		}
+		else
+		{
+			for(; install_index<[elements count]; install_index++)
+			{
+				[[[log textStorage] mutableString] appendString: [@"Installing:  " stringByAppendingString: [elements objectAtIndex: install_index]]];
+				[[[log textStorage] mutableString] appendString: @"\n"];
+			}
 		}
 		//scroll to the bottom of the log and up the progress bar
 		[log scrollRangeToVisible: NSMakeRange([[log string] length], [[log string] length])];
 		[progress_bar setDoubleValue: [progress_bar maxValue]];
+		
+		//label stuff!
+		if([colorLabel isEqualToString: @"0"]==NO)  //if we have a label wanted, lets add it!
+		{
+			[progress_bar setIndeterminate: YES];
+			[status_text setStringValue: @"Applying color labels:"];
+			[[self window] displayIfNeeded];
+			if([zip_umod isEqualToString: @"zip"])
+			{
+				int label_index;
+				for(label_index=0; label_index<[elements count]; label_index++)
+				{
+					//crazy go nuts CoreFoundation code thanks to CocoaDev that gets me the exact HFS file path
+					CFURLRef posixURL=CFURLCreateWithFileSystemPath(NULL, (CFStringRef)[[ut_path stringByAppendingString: @"/"] stringByAppendingString: [[[[elements objectAtIndex: label_index] componentsSeparatedByString: @":"] objectAtIndex: 1] substringFromIndex: 3]], kCFURLPOSIXPathStyle, false);
+					CFStringRef asPath=CFURLCopyFileSystemPath(posixURL, kCFURLHFSPathStyle);
+					CFRelease(posixURL);
+					
+					//make the command and execute AppleScript
+					NSString *asCommand=[NSString stringWithFormat: @"tell application \"Finder\"\nset label index of alias \"%@\" to %@\nend tell", asPath, colorLabel];
+					CFRelease(asPath);
+					NSAppleScript *script=[[NSAppleScript alloc] initWithSource: asCommand];
+					[script executeAndReturnError: nil];
+					[script autorelease];
+				}
+			}
+			else
+			{
+				int label_index;
+				for(label_index=0; label_index<[elements count]; label_index++)
+				{
+					//crazy go nuts CoreFoundation code thanks to CocoaDev that gets me the exact HFS file path
+					CFURLRef posixURL=CFURLCreateWithFileSystemPath(NULL, (CFStringRef)[[ut_path stringByAppendingString: @"/"] stringByAppendingString: [elements objectAtIndex: label_index]], kCFURLPOSIXPathStyle, false);
+					CFStringRef asPath=CFURLCopyFileSystemPath(posixURL, kCFURLHFSPathStyle);
+					CFRelease(posixURL);
+					
+					//make the command and execute AppleScript
+					NSString *asCommand=[NSString stringWithFormat: @"tell application \"Finder\"\nset label index of alias \"%@\" to %@\nend tell", asPath, colorLabel];
+					CFRelease(asPath);
+					NSAppleScript *script=[[NSAppleScript alloc] initWithSource: asCommand];
+					[script executeAndReturnError: nil];
+					[script autorelease];
+				}
+			}
+		}
+		
+		[progress_bar setIndeterminate: NO];
 		[status_text setStringValue: @"Cleaning up..."];
 		
 		if(moved==YES)  //we need to move the mod file back to the original place
 		{
 			[[NSFileManager defaultManager] movePath: mod_path toPath: old_mod handler: self];
 		}
+		
+		//write to the log
+		NSMutableArray *logerage=[NSMutableArray arrayWithContentsOfFile: [@"~/Library/Logs/com.atPAK.04ModInstallerLog.log" stringByExpandingTildeInPath]];
+		if(logerage==nil)  //the file doesn't exist
+		{
+			logerage=[NSMutableArray array];
+		}
+		//create the entry
+		NSMutableDictionary *dictage=[NSMutableDictionary dictionary];
+		[dictage setObject: [mod_path lastPathComponent] forKey: @"name"];
+		[dictage setObject: installTime forKey: @"when"];
+		//add moddified elements since elements could potentially (if it was a .zip) have other crap with it
+		NSMutableArray *new_elements=[NSMutableArray array];
+		if([zip_umod isEqualToString: @"zip"])
+		{
+			int lcv;
+			for(lcv=0; lcv<[elements count]; lcv++)
+			{
+				[new_elements addObject: [[[[elements objectAtIndex: lcv] componentsSeparatedByString: @":"] objectAtIndex: 1] substringFromIndex: 3]];
+			}
+		}
+		else
+		{
+			int lcv;
+			for(lcv=0; lcv<[elements count]; lcv++)
+			{
+				[new_elements addObject: [elements objectAtIndex: lcv]];
+			}
+		}
+		[dictage setObject: new_elements forKey: @"files"];
+		[logerage addObject: dictage];
+		//write out the new array
+		[logerage writeToFile: [@"~/Library/Logs/com.atPAK.04ModInstallerLog.log" stringByExpandingTildeInPath] atomically: YES];
 		
 		//post a notification that the install is done
 		[[NSNotificationCenter defaultCenter] postNotificationName: @"InstallDone" object: self];
@@ -368,6 +442,7 @@
 	[task release];
 	[elements release];
 	[old_mod release];
+	[installTime release];
 	[super dealloc];
 }
 
