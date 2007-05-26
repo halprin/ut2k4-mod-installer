@@ -25,6 +25,7 @@
 - (IBAction)displayPrefs:(id)sender;
 -(void) textChange: (NSNotification*) notification;
 -(void) finishLoad: (NSNotification*) notification;
+-(void) applicationWillTerminate: (NSNotification*) notification;
 -(BOOL) application: (NSApplication*) theApp openFile: (NSString*) filepath;
 -(void)dealloc;
 @end

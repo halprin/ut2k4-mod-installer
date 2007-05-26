@@ -16,6 +16,7 @@
 	int install_index;
 	BOOL moved;
 	NSString *colorLabel;
+	NSString *installTime;
 }
 -(void) windowDidLoad;
 -(void) setUT: (NSString*) path;

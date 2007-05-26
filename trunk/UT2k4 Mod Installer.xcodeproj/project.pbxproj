@@ -19,8 +19,10 @@
 		EE7766FC0BA10B4D002E2D24 /* Preferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = EE7766FB0BA10B4D002E2D24 /* Preferences.nib */; };
 		EE89920B0AD0962400AC5B87 /* ProgressWindow.nib in Resources */ = {isa = PBXBuildFile; fileRef = EE89920A0AD0962400AC5B87 /* ProgressWindow.nib */; };
 		EE8992A20AD0B27900AC5B87 /* Progress.m in Sources */ = {isa = PBXBuildFile; fileRef = EE8992A10AD0B27900AC5B87 /* Progress.m */; };
+		EEA2649E0C0806E700091750 /* FileList.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA2649D0C0806E700091750 /* FileList.m */; };
 		EEA6E24D0AD20AC100D5B54B /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = EEA6E24C0AD20AC100D5B54B /* Credits.html */; };
 		EEA8969E0BD1D1390038ACFC /* PreferencesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA8969C0BD1D1390038ACFC /* PreferencesManager.m */; };
+		EEB69F160C0002B300DF56D1 /* LoggerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB69F150C0002B300DF56D1 /* LoggerDataSource.m */; };
 		EEC905F40ACDEE5300AD2F02 /* mod_install.icns in Resources */ = {isa = PBXBuildFile; fileRef = EEC905F30ACDEE5300AD2F02 /* mod_install.icns */; };
 /* End PBXBuildFile section */
 
@@ -47,9 +49,13 @@
 		EE89920A0AD0962400AC5B87 /* ProgressWindow.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = ProgressWindow.nib; sourceTree = "<group>"; };
 		EE8992A00AD0B27900AC5B87 /* Progress.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Progress.h; sourceTree = "<group>"; };
 		EE8992A10AD0B27900AC5B87 /* Progress.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Progress.m; sourceTree = "<group>"; };
+		EEA2649C0C0806E700091750 /* FileList.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FileList.h; sourceTree = "<group>"; };
+		EEA2649D0C0806E700091750 /* FileList.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = FileList.m; sourceTree = "<group>"; };
 		EEA6E24C0AD20AC100D5B54B /* Credits.html */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html; path = Credits.html; sourceTree = "<group>"; };
 		EEA8969C0BD1D1390038ACFC /* PreferencesManager.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = PreferencesManager.m; sourceTree = "<group>"; };
 		EEA8969D0BD1D1390038ACFC /* PreferencesManager.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PreferencesManager.h; sourceTree = "<group>"; };
+		EEB69F140C0002B300DF56D1 /* LoggerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoggerDataSource.h; sourceTree = "<group>"; };
+		EEB69F150C0002B300DF56D1 /* LoggerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoggerDataSource.m; sourceTree = "<group>"; };
 		EEC905F30ACDEE5300AD2F02 /* mod_install.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = mod_install.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +82,10 @@
 				EE0F690A0ACCCB4100DB4634 /* MainWindow.m */,
 				EE0B8E2A0B7478D2007EB7DB /* Logger.h */,
 				EE0B8E2B0B7478D2007EB7DB /* Logger.m */,
+				EEB69F140C0002B300DF56D1 /* LoggerDataSource.h */,
+				EEB69F150C0002B300DF56D1 /* LoggerDataSource.m */,
+				EEA2649C0C0806E700091750 /* FileList.h */,
+				EEA2649D0C0806E700091750 /* FileList.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -219,6 +229,8 @@
 				EE8992A20AD0B27900AC5B87 /* Progress.m in Sources */,
 				EE0B8E2C0B7478D2007EB7DB /* Logger.m in Sources */,
 				EEA8969E0BD1D1390038ACFC /* PreferencesManager.m in Sources */,
+				EEB69F160C0002B300DF56D1 /* LoggerDataSource.m in Sources */,
+				EEA2649E0C0806E700091750 /* FileList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

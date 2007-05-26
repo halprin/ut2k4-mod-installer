@@ -91,9 +91,6 @@
 	[controller autorelease];
 	controller=[[Progress alloc] initWithWindowNibName: @"ProgressWindow"];
 	
-	//NSAppleScript *script=[[NSAppleScript alloc] initWithSource: @"tell application \"Finder\"\nset label index of alias \"Kendall:\" to 1\nend tell"];
-	//[script executeAndReturnError: nil];
-	
 	//need to make sure that UT2k4 and the mod really exist as the user could
 	//of entered the path manually
 	NSFileManager *exists=[NSFileManager defaultManager];
@@ -152,20 +149,6 @@
 				[controller setColorLabel: colorLabel];
 				[NSApp beginSheet: [controller window] modalForWindow: window modalDelegate: self didEndSelector: nil contextInfo: nil];
 			}
-			
-			if(nope!=YES)
-			{
-				//write the path to a new preference file
-				BOOL deleted=[exists removeFileAtPath: [@"~/Library/Preferences/com.atPAK.04ModInstallerPrefs.plist" stringByExpandingTildeInPath] handler: self];
-				if(deleted==NO)
-				{
-					NSLog(@"New prefs can't be overriden!");
-				}
-				NSMutableDictionary *root=[NSMutableDictionary dictionary];
-				[root setValue: [ut_path stringValue] forKey: @"UTpath"];
-				[root setValue: colorLabel forKey: @"ColorLabel"];
-				[NSKeyedArchiver archiveRootObject: root toFile: [@"~/Library/Preferences/com.atPAK.04ModInstallerPrefs.plist" stringByExpandingTildeInPath]];
-			}
 		}
 	}
 }
@@ -173,7 +156,7 @@
 - (IBAction)displayLogs:(id)sender
 {
 	[loggerage autorelease];
-	loggerage=[[Logger alloc] initWithWindowNibName: @"InstallLog"];
+	loggerage=[[Logger alloc] init];
 	[loggerage showWindow: self];
 }
 
@@ -270,6 +253,21 @@
 		//send a notification that the text changed b/c the text box doesn't do it
 		[[NSNotificationCenter defaultCenter] postNotificationName: @"NSControlTextDidChangeNotification" object: ut_path];
 	}
+}
+
+-(void) applicationWillTerminate: (NSNotification*) notification
+{
+	//write the path and color label to a new preference file
+	NSFileManager *exists=[NSFileManager defaultManager];
+	BOOL deleted=[exists removeFileAtPath: [@"~/Library/Preferences/com.atPAK.04ModInstallerPrefs.plist" stringByExpandingTildeInPath] handler: self];
+	if(deleted==NO)
+	{
+		NSLog(@"New prefs can't be overriden!");
+	}
+	NSMutableDictionary *root=[NSMutableDictionary dictionary];
+	[root setValue: [ut_path stringValue] forKey: @"UTpath"];
+	[root setValue: colorLabel forKey: @"ColorLabel"];
+	[NSKeyedArchiver archiveRootObject: root toFile: [@"~/Library/Preferences/com.atPAK.04ModInstallerPrefs.plist" stringByExpandingTildeInPath]];
 }
 
 -(BOOL) application: (NSApplication*) theApp openFile: (NSString*) filepath
