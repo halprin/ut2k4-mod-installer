@@ -57,6 +57,8 @@
 		EEB69F140C0002B300DF56D1 /* LoggerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoggerDataSource.h; sourceTree = "<group>"; };
 		EEB69F150C0002B300DF56D1 /* LoggerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoggerDataSource.m; sourceTree = "<group>"; };
 		EEC905F30ACDEE5300AD2F02 /* mod_install.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = mod_install.icns; sourceTree = "<group>"; };
+		EECFA9DD0D1B8AED0016F3B9 /* UT2k4 Mod Installer.dmg */ = {isa = PBXFileReference; lastKnownFileType = file; path = "UT2k4 Mod Installer.dmg"; sourceTree = "<group>"; };
+		EECFA9DF0D1B8AFD0016F3B9 /* Read Me.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Read Me.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EECFA9DD0D1B8AED0016F3B9 /* UT2k4 Mod Installer.dmg */,
+				EECFA9DF0D1B8AFD0016F3B9 /* Read Me.txt */,
 				EE15BC2B0ADDE1ED00B3A1CA /* umod_icon.icns */,
 				EEA6E24C0AD20AC100D5B54B /* Credits.html */,
 				EE89920A0AD0962400AC5B87 /* ProgressWindow.nib */,
