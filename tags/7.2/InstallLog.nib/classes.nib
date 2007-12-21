@@ -1,0 +1,25 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {ok = id; }; 
+            CLASS = FileList; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {files = NSTextView; window = NSWindow; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {uninstall = id; view = id; }; 
+            CLASS = Logger; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                lister = FileList; 
+                table = NSTableView; 
+                uninstallButton = NSButton; 
+                viewButton = NSButton; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

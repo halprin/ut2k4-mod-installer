@@ -1,0 +1,45 @@
+Thank you for downloading UT2k4 Mod Installer!  This is a program that easily installs modifications for Unreal Tournament 2004 in the form of a ZIP file that has the folders/files in it or a UMOD.
+
+
+The steps to install a mod are as follows:
+
+1.  The application will try to automatically find the Unreal Tournament 2004 installation.  If for some reason the UT2k4 location text box is left blank, you can fill it in by either:  typing in the path manually, clicking the "Browse..." button and selecting it, or drag and droping it onto the text box.  The application will remember this path after you quit.
+
+2.  Now select what kind of mod file it is that you want to install whether it is a zip or a UMOD file.
+
+3.  You will now need to select the mod you wan to install.  You can do this by typing in the path manually, clicking the "Browse..." button and selecting it, or choosing File -> Open.  The "Browse..." button/"Open" menu item will let you select only a zip or UMOD file depending on what was chosen in step 2.
+
+4.  Now click on the "Install" button to install the mod!
+
+There are other things you can do as well.
+There are preferences (command+,) where you can choose to have the application label files with a color when installing a mod.
+There is also a log viewer (command+option+L).  From here you can view previously mods and the associated files that were installed with this application.
+
+
+The system requirements are the same as Unreal Tournament 2004 itself (Mac OS X 10.2.8 or higher, PPC/x86) so if you can run UT2k4, you can run this application.  If you can't, please tell me!
+
+
+Change log:
+
+Version 7.2:
+* Leopard compatibility
+* Updated the @PAK software URL in the credits
+
+Version 7.1:
+* Plugged memory leaks including a major one
+* Added a preference to label installed files (command+,)
+* Added an install log that is viewed during installation and can be after the fact (command+option+L)
+
+Version 7.0.1:
+* Automaticaly opens up when you double click on a UMOD file in the Finder and auto-fills in the File Path and sets the mod type to UMOD
+* .ut4mods can now be installed correctly
+
+Version 7.0:
+* First version programmed in Cocoa/Objective-C!  This is also the first version that is a Universal Binary!  Other than this, the program is smaller, faster, and just plain better!
+* No longer has a problem with spaces in the filepath to the UMOD
+
+This should be the last major version until Unreal Tournament 3 and then UT3 Mod Installer will be made.  I will make bug fixes and probably even feature enhancements though and release updates.
+
+
+-Peter "halprin" Kendall
+@PAK software - http://homepage.mac.com/kendallp/at_PAK/

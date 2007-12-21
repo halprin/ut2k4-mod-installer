@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'UT2k4 Mod Installer' target in the 'UT2k4 Mod Installer' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

@@ -1,0 +1,16 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = Progress; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                log = NSTextView; 
+                "progress_bar" = NSProgressIndicator; 
+                "status_text" = NSTextField; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

@@ -1,0 +1,500 @@
+// !$*UTF8*$!
+{
+	089C165DFE840E0CC02AAC07 /* English */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {699, 432}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 96}";
+			sepNavVisRect = "{{0, 0}, {713, 431}}";
+			sepNavWindowFrame = "{{84, 550}, {758, 560}}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeArchitecture = i386;
+		activeBuildConfigurationName = Release;
+		activeExecutable = EE06416B0A6B62AB0023C0F1 /* UT2k4 Mod Installer */;
+		activeTarget = 8D1107260486CEB800E47090 /* UT2k4 Mod Installer */;
+		addToTargets = (
+			8D1107260486CEB800E47090 /* UT2k4 Mod Installer */,
+		);
+		breakpoints = (
+			EE0283E00BE31E2800E6F352 /* Progress.m:254 */,
+			EE02842C0BE3246100E6F352 /* MainWindow.m:193 */,
+			EEC135500BE3FB170054F6AA /* Progress.m:269 */,
+			EE73EEA80BEC3A660021CBE8 /* Progress.m:265 */,
+		);
+		codeSenseManager = EE06417A0A6B62AD0023C0F1 /* Code sense */;
+		executables = (
+			EE06416B0A6B62AB0023C0F1 /* UT2k4 Mod Installer */,
+		);
+		perUserDictionary = {
+			"PBXConfiguration.PBXBreakpointsDataSource.v1:1CA1AED706398EBD00589147" = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBreakpointsDataSource_BreakpointID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					210,
+					20,
+					110,
+					109,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBreakpointsDataSource_ActionID,
+					PBXBreakpointsDataSource_TypeID,
+					PBXBreakpointsDataSource_BreakpointID,
+					PBXBreakpointsDataSource_UseID,
+					PBXBreakpointsDataSource_LocationID,
+					PBXBreakpointsDataSource_ConditionID,
+					PBXBreakpointsDataSource_ContinueID,
+				);
+			};
+			"PBXConfiguration.PBXBreakpointsDataSource.v1:1CA23EDF0692099D00951B8B" = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBreakpointsDataSource_BreakpointID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					228,
+					20,
+					128,
+					127,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBreakpointsDataSource_ActionID,
+					PBXBreakpointsDataSource_TypeID,
+					PBXBreakpointsDataSource_BreakpointID,
+					PBXBreakpointsDataSource_UseID,
+					PBXBreakpointsDataSource_LocationID,
+					PBXBreakpointsDataSource_ConditionID,
+					PBXBreakpointsDataSource_ContinueID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXBookmarksDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBookmarksDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					200,
+					200,
+					57.5835,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBookmarksDataSource_LocationID,
+					PBXBookmarksDataSource_NameID,
+					PBXBookmarksDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXErrorsWarningsDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXErrorsWarningsDataSource_LocationID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					300,
+					133,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXErrorsWarningsDataSource_TypeID,
+					PBXErrorsWarningsDataSource_MessageID,
+					PBXErrorsWarningsDataSource_LocationID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXExecutablesDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXExecutablesDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					22,
+					300,
+					131,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXExecutablesDataSource_ActiveFlagID,
+					PBXExecutablesDataSource_NameID,
+					PBXExecutablesDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					243,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFindDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFindDataSource_LocationID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					200,
+					120,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFindDataSource_MessageID,
+					PBXFindDataSource_LocationID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXSymbolsDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXSymbolsDataSource_SymbolNameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					16,
+					200,
+					50,
+					183,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXSymbolsDataSource_SymbolTypeIconID,
+					PBXSymbolsDataSource_SymbolNameID,
+					PBXSymbolsDataSource_SymbolTypeID,
+					PBXSymbolsDataSource_ReferenceNameID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.XCSCMDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					345,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_SCM_ColumnID,
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					203,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 219909392;
+			PBXWorkspaceStateSaveDate = 219909392;
+		};
+		sourceControlManager = EE0641790A6B62AD0023C0F1 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	29B97316FDCFA39411CA2CEA /* main.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {561, 210}}";
+			sepNavSelRange = "{201, 0}";
+			sepNavVisRect = "{{0, 0}, {0, 0}}";
+			sepNavWindowFrame = "{{15, 613}, {758, 560}}";
+		};
+	};
+	32CA4F630368D1EE00C91783 /* UT2k4 Mod Installer_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {680, 112}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {435, 95}}";
+			sepNavWindowFrame = "{{38, 592}, {758, 560}}";
+		};
+	};
+	8D1107260486CEB800E47090 /* UT2k4 Mod Installer */ = {
+		activeExec = 0;
+		executables = (
+			EE06416B0A6B62AB0023C0F1 /* UT2k4 Mod Installer */,
+		);
+	};
+	8D1107310486CEB800E47090 /* Info.plist */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {699, 714}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{594, 819}";
+			sepNavVisRect = "{{0, 283}, {713, 431}}";
+			sepNavWindowFrame = "{{458, 246}, {758, 560}}";
+		};
+	};
+	EE0283E00BE31E2800E6F352 /* Progress.m:254 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = EE8992A10AD0B27900AC5B87 /* Progress.m */;
+		functionName = "-reader:";
+		hitCount = 1;
+		ignoreCount = 0;
+		lineNumber = 254;
+		location = "UT2k4 Mod Installer";
+		modificationTime = 201896828.632932;
+		state = 2;
+	};
+	EE02842C0BE3246100E6F352 /* MainWindow.m:193 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = EE0F690A0ACCCB4100DB4634 /* MainWindow.m */;
+		functionName = "-finishLoad:";
+		hitCount = 1;
+		ignoreCount = 0;
+		lineNumber = 193;
+		location = "UT2k4 Mod Installer";
+		modificationTime = 201896828.633853;
+		state = 2;
+	};
+	EE06416B0A6B62AB0023C0F1 /* UT2k4 Mod Installer */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = "UT2k4 Mod Installer";
+		savedGlobals = {
+		};
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	EE0641790A6B62AD0023C0F1 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			SubversionToolPath = /usr/local/bin/svn;
+		};
+		scmType = "";
+	};
+	EE06417A0A6B62AD0023C0F1 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	EE0B8E2A0B7478D2007EB7DB /* Logger.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {927, 468}}";
+			sepNavSelRange = "{528, 0}";
+			sepNavVisRect = "{{0, 0}, {927, 468}}";
+			sepNavWindowFrame = "{{491, 543}, {972, 597}}";
+		};
+	};
+	EE0B8E2B0B7478D2007EB7DB /* Logger.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {950, 1176}}";
+			sepNavSelRange = "{259, 0}";
+			sepNavVisRange = "{0, 805}";
+			sepNavVisRect = "{{0, 0}, {0, 0}}";
+			sepNavWindowFrame = "{{581, 181}, {972, 597}}";
+		};
+	};
+	EE0F69090ACCCB4100DB4634 /* MainWindow.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {699, 448}}";
+			sepNavSelRange = "{251, 0}";
+			sepNavVisRange = "{0, 874}";
+			sepNavVisRect = "{{0, 0}, {713, 431}}";
+			sepNavWindowFrame = "{{456, 218}, {758, 560}}";
+		};
+	};
+	EE0F690A0ACCCB4100DB4634 /* MainWindow.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1448, 4298}}";
+			sepNavSelRange = "{3051, 0}";
+			sepNavVisRange = "{2674, 1565}";
+			sepNavVisRect = "{{0, 1983}, {927, 468}}";
+			sepNavWindowFrame = "{{70, 49}, {972, 597}}";
+		};
+	};
+	EE15BC2B0ADDE1ED00B3A1CA /* umod_icon.icns */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{15, 181}, {972, 597}}";
+		};
+	};
+	EE2363800ACF05E200957E16 /* at_sign.png */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{15, 613}, {758, 560}}";
+		};
+	};
+	EE73EEA80BEC3A660021CBE8 /* Progress.m:265 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+			EE73EEB80BEC3A900021CBE8 /* XCBreakpointLogAction */,
+		);
+		breakpointStyle = 0;
+		comments = "Log breakpoint and hit count and auto-continue.";
+		condition = EE73EEB90BEC3A900021CBE8 /* XCGDBBreakpointCondition */;
+		continueAfterActions = 1;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = EE8992A10AD0B27900AC5B87 /* Progress.m */;
+		functionName = "-reader:";
+		hitCount = 1;
+		ignoreCount = 0;
+		lineNumber = 265;
+		location = "UT2k4 Mod Installer";
+		modificationTime = 201896828.635802;
+		state = 2;
+	};
+	EE73EEB80BEC3A900021CBE8 /* XCBreakpointLogAction */ = {
+		isa = XCBreakpointLogAction;
+		fallbackIsa = XCBreakpointAction;
+		logMessage = 1;
+		message = "Breakpoints '%B' hit %H times.";
+		speakMessage = 0;
+		useDebuggerSideImplementation = 0;
+	};
+	EE73EEB90BEC3A900021CBE8 /* XCGDBBreakpointCondition */ = {
+		isa = XCGDBBreakpointCondition;
+		conditionString = "";
+	};
+	EE8992A00AD0B27900AC5B87 /* Progress.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {713, 462}}";
+			sepNavSelRange = "{57, 0}";
+			sepNavVisRect = "{{0, 31}, {713, 431}}";
+			sepNavWindowFrame = "{{78, 503}, {758, 560}}";
+		};
+	};
+	EE8992A10AD0B27900AC5B87 /* Progress.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {926, 6580}}";
+			sepNavSelRange = "{1474, 132}";
+			sepNavVisRange = "{1362, 427}";
+			sepNavVisRect = "{{0, 5574}, {713, 431}}";
+			sepNavWindowFrame = "{{283, 61}, {758, 560}}";
+		};
+	};
+	EEA2649C0C0806E700091750 /* FileList.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {875, 500}}";
+			sepNavSelRange = "{231, 0}";
+			sepNavVisRect = "{{0, 0}, {875, 500}}";
+			sepNavWindowFrame = "{{134, 277}, {920, 629}}";
+		};
+	};
+	EEA2649D0C0806E700091750 /* FileList.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {561, 420}}";
+			sepNavSelRange = "{418, 0}";
+			sepNavVisRect = "{{0, 0}, {0, 0}}";
+			sepNavWindowFrame = "{{470, 549}, {920, 629}}";
+		};
+	};
+	EEA6E24C0AD20AC100D5B54B /* Credits.html */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {866, 840}}";
+			sepNavSelRange = "{513, 44}";
+			sepNavVisRange = "{0, 851}";
+			sepNavVisRect = "{{0, 0}, {713, 431}}";
+			sepNavWindowFrame = "{{756, 263}, {758, 560}}";
+		};
+	};
+	EEA8969C0BD1D1390038ACFC /* PreferencesManager.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {927, 1806}}";
+			sepNavSelRange = "{203, 0}";
+			sepNavVisRect = "{{0, 0}, {927, 468}}";
+			sepNavWindowFrame = "{{15, 576}, {972, 597}}";
+		};
+	};
+	EEA8969D0BD1D1390038ACFC /* PreferencesManager.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {927, 468}}";
+			sepNavSelRange = "{351, 0}";
+			sepNavVisRect = "{{0, 0}, {927, 468}}";
+			sepNavWindowFrame = "{{508, 385}, {972, 597}}";
+		};
+	};
+	EEB69F140C0002B300DF56D1 /* LoggerDataSource.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {875, 500}}";
+			sepNavSelRange = "{646, 0}";
+			sepNavVisRect = "{{0, 0}, {875, 500}}";
+			sepNavWindowFrame = "{{84, 481}, {920, 629}}";
+		};
+	};
+	EEB69F150C0002B300DF56D1 /* LoggerDataSource.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {861, 896}}";
+			sepNavSelRange = "{341, 0}";
+			sepNavVisRange = "{0, 746}";
+			sepNavVisRect = "{{0, 326}, {875, 500}}";
+			sepNavWindowFrame = "{{463, 149}, {920, 629}}";
+		};
+	};
+	EEC135500BE3FB170054F6AA /* Progress.m:269 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = EE8992A10AD0B27900AC5B87 /* Progress.m */;
+		functionName = "-reader:";
+		hitCount = 1;
+		ignoreCount = 0;
+		lineNumber = 269;
+		location = "UT2k4 Mod Installer";
+		modificationTime = 201896828.634603;
+		state = 2;
+	};
+	EEC905F30ACDEE5300AD2F02 /* mod_install.icns */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{15, 218}, {758, 560}}";
+		};
+	};
+}
