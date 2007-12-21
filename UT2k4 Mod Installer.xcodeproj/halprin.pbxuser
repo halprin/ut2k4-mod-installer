@@ -436,10 +436,10 @@
 	EEA6E24C0AD20AC100D5B54B /* Credits.html */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {866, 840}}";
-			sepNavSelRange = "{457, 105}";
+			sepNavSelRange = "{513, 44}";
 			sepNavVisRange = "{0, 851}";
 			sepNavVisRect = "{{0, 0}, {713, 431}}";
-			sepNavWindowFrame = "{{456, 339}, {758, 560}}";
+			sepNavWindowFrame = "{{756, 263}, {758, 560}}";
 		};
 	};
 	EEA8969C0BD1D1390038ACFC /* PreferencesManager.m */ = {
