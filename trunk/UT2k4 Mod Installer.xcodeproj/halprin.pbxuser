@@ -3,14 +3,14 @@
 	089C165DFE840E0CC02AAC07 /* English */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {699, 432}}";
-			sepNavSelRange = "{0, 0}";
+			sepNavSelRange = "{81, 0}";
 			sepNavVisRange = "{0, 96}";
 			sepNavVisRect = "{{0, 0}, {713, 431}}";
 			sepNavWindowFrame = "{{84, 550}, {758, 560}}";
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
-		activeArchitecture = i386;
+		activeArchitecture = ppc;
 		activeBuildConfigurationName = Release;
 		activeExecutable = EE06416B0A6B62AB0023C0F1 /* UT2k4 Mod Installer */;
 		activeTarget = 8D1107260486CEB800E47090 /* UT2k4 Mod Installer */;
@@ -210,8 +210,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 219909392;
-			PBXWorkspaceStateSaveDate = 219909392;
+			PBXPerProjectTemplateStateSaveDate = 223593270;
+			PBXWorkspaceStateSaveDate = 223593270;
 		};
 		sourceControlManager = EE0641790A6B62AD0023C0F1 /* Source Control */;
 		userBuildSettings = {
@@ -242,10 +242,10 @@
 	8D1107310486CEB800E47090 /* Info.plist */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {699, 714}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{594, 819}";
+			sepNavSelRange = "{332, 0}";
+			sepNavVisRange = "{0, 892}";
 			sepNavVisRect = "{{0, 283}, {713, 431}}";
-			sepNavWindowFrame = "{{458, 246}, {758, 560}}";
+			sepNavWindowFrame = "{{490, 201}, {758, 560}}";
 		};
 	};
 	EE0283E00BE31E2800E6F352 /* Progress.m:254 */ = {
@@ -258,11 +258,11 @@
 		delayBeforeContinue = 0;
 		fileReference = EE8992A10AD0B27900AC5B87 /* Progress.m */;
 		functionName = "-reader:";
-		hitCount = 1;
+		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 254;
 		location = "UT2k4 Mod Installer";
-		modificationTime = 201896828.632932;
+		modificationTime = 223589533.349252;
 		state = 2;
 	};
 	EE02842C0BE3246100E6F352 /* MainWindow.m:193 */ = {
@@ -275,11 +275,11 @@
 		delayBeforeContinue = 0;
 		fileReference = EE0F690A0ACCCB4100DB4634 /* MainWindow.m */;
 		functionName = "-finishLoad:";
-		hitCount = 1;
+		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 193;
 		location = "UT2k4 Mod Installer";
-		modificationTime = 201896828.633853;
+		modificationTime = 223589533.349304;
 		state = 2;
 	};
 	EE06416B0A6B62AB0023C0F1 /* UT2k4 Mod Installer */ = {
@@ -316,6 +316,7 @@
 		isSCMEnabled = 0;
 		scmConfiguration = {
 			SubversionToolPath = /usr/local/bin/svn;
+			repositoryName = "UT2k4 Mod Installer";
 		};
 		scmType = "";
 	};
@@ -325,25 +326,26 @@
 	};
 	EE0B8E2A0B7478D2007EB7DB /* Logger.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {927, 468}}";
-			sepNavSelRange = "{528, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {913, 469}}";
+			sepNavSelRange = "{529, 0}";
+			sepNavVisRange = "{0, 529}";
 			sepNavVisRect = "{{0, 0}, {927, 468}}";
 			sepNavWindowFrame = "{{491, 543}, {972, 597}}";
 		};
 	};
 	EE0B8E2B0B7478D2007EB7DB /* Logger.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {950, 1176}}";
-			sepNavSelRange = "{259, 0}";
-			sepNavVisRange = "{0, 805}";
+			sepNavIntBoundsRect = "{{0, 0}, {950, 1190}}";
+			sepNavSelRange = "{928, 0}";
+			sepNavVisRange = "{186, 968}";
 			sepNavVisRect = "{{0, 0}, {0, 0}}";
-			sepNavWindowFrame = "{{581, 181}, {972, 597}}";
+			sepNavWindowFrame = "{{809, 253}, {972, 597}}";
 		};
 	};
 	EE0F69090ACCCB4100DB4634 /* MainWindow.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {699, 448}}";
-			sepNavSelRange = "{251, 0}";
+			sepNavSelRange = "{434, 0}";
 			sepNavVisRange = "{0, 874}";
 			sepNavVisRect = "{{0, 0}, {713, 431}}";
 			sepNavWindowFrame = "{{456, 218}, {758, 560}}";
@@ -351,11 +353,11 @@
 	};
 	EE0F690A0ACCCB4100DB4634 /* MainWindow.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1448, 4298}}";
-			sepNavSelRange = "{3051, 0}";
-			sepNavVisRange = "{2674, 1565}";
+			sepNavIntBoundsRect = "{{0, 0}, {1358, 4046}}";
+			sepNavSelRange = "{7172, 27}";
+			sepNavVisRange = "{6722, 1590}";
 			sepNavVisRect = "{{0, 1983}, {927, 468}}";
-			sepNavWindowFrame = "{{70, 49}, {972, 597}}";
+			sepNavWindowFrame = "{{483, 163}, {972, 597}}";
 		};
 	};
 	EE15BC2B0ADDE1ED00B3A1CA /* umod_icon.icns */ = {
@@ -381,11 +383,11 @@
 		delayBeforeContinue = 0;
 		fileReference = EE8992A10AD0B27900AC5B87 /* Progress.m */;
 		functionName = "-reader:";
-		hitCount = 1;
+		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 265;
 		location = "UT2k4 Mod Installer";
-		modificationTime = 201896828.635802;
+		modificationTime = 223589533.349348;
 		state = 2;
 	};
 	EE73EEB80BEC3A900021CBE8 /* XCBreakpointLogAction */ = {
@@ -410,50 +412,54 @@
 	};
 	EE8992A10AD0B27900AC5B87 /* Progress.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {926, 6580}}";
-			sepNavSelRange = "{1474, 132}";
-			sepNavVisRange = "{1362, 427}";
+			sepNavIntBoundsRect = "{{0, 0}, {1178, 6468}}";
+			sepNavSelRange = "{2824, 14}";
+			sepNavVisRange = "{2071, 1300}";
 			sepNavVisRect = "{{0, 5574}, {713, 431}}";
 			sepNavWindowFrame = "{{283, 61}, {758, 560}}";
 		};
 	};
 	EEA2649C0C0806E700091750 /* FileList.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {875, 500}}";
-			sepNavSelRange = "{231, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {861, 501}}";
+			sepNavSelRange = "{232, 0}";
+			sepNavVisRange = "{0, 238}";
 			sepNavVisRect = "{{0, 0}, {875, 500}}";
 			sepNavWindowFrame = "{{134, 277}, {920, 629}}";
 		};
 	};
 	EEA2649D0C0806E700091750 /* FileList.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {561, 420}}";
-			sepNavSelRange = "{418, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {861, 501}}";
+			sepNavSelRange = "{231, 0}";
+			sepNavVisRange = "{0, 613}";
 			sepNavVisRect = "{{0, 0}, {0, 0}}";
-			sepNavWindowFrame = "{{470, 549}, {920, 629}}";
+			sepNavWindowFrame = "{{461, 513}, {920, 629}}";
 		};
 	};
 	EEA6E24C0AD20AC100D5B54B /* Credits.html */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {866, 840}}";
-			sepNavSelRange = "{457, 105}";
+			sepNavSelRange = "{513, 44}";
 			sepNavVisRange = "{0, 851}";
 			sepNavVisRect = "{{0, 0}, {713, 431}}";
-			sepNavWindowFrame = "{{456, 339}, {758, 560}}";
+			sepNavWindowFrame = "{{756, 263}, {758, 560}}";
 		};
 	};
 	EEA8969C0BD1D1390038ACFC /* PreferencesManager.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {927, 1806}}";
-			sepNavSelRange = "{203, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {913, 1806}}";
+			sepNavSelRange = "{645, 0}";
+			sepNavVisRange = "{0, 883}";
 			sepNavVisRect = "{{0, 0}, {927, 468}}";
-			sepNavWindowFrame = "{{15, 576}, {972, 597}}";
+			sepNavWindowFrame = "{{514, 497}, {972, 597}}";
 		};
 	};
 	EEA8969D0BD1D1390038ACFC /* PreferencesManager.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {927, 468}}";
-			sepNavSelRange = "{351, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {913, 469}}";
+			sepNavSelRange = "{190, 0}";
+			sepNavVisRange = "{0, 431}";
 			sepNavVisRect = "{{0, 0}, {927, 468}}";
 			sepNavWindowFrame = "{{508, 385}, {972, 597}}";
 		};
@@ -485,11 +491,11 @@
 		delayBeforeContinue = 0;
 		fileReference = EE8992A10AD0B27900AC5B87 /* Progress.m */;
 		functionName = "-reader:";
-		hitCount = 1;
+		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 269;
 		location = "UT2k4 Mod Installer";
-		modificationTime = 201896828.634603;
+		modificationTime = 223589533.349336;
 		state = 2;
 	};
 	EEC905F30ACDEE5300AD2F02 /* mod_install.icns */ = {
