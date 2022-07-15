@@ -5,7 +5,7 @@ This is a program that easily installs modifications for Unreal Tournament 2004 
 - Mac OS X 10.2.8 or higher
 - Unreal Tournament 2004 (retail) version 3204 or higher
 
-[Direct binary download](http://kendallp.net/public/files/software/Mac_Installer_72.tbz)
+[Direct binary download](https://halprin.io/public/files/software/Mac_Installer_72.tbz)
 
 Change log:
 - 7.2
